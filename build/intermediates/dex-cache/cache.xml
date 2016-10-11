@@ -84,6 +84,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_5d0c9c62ecb2018043d216d57c50aaa5294d4fd5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
         jumboMode="true"
         optimize="true"
@@ -97,8 +106,17 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="317b113f778fc1a6f09be5bb466e8a00e5f51f6e">
+        sha1="008cc80ff6844320835a055268da79b6362e325e">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55237357f500d953fce70396db6ee48acfaae80e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.karumi/dexter/2.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3f8fe3c5035c003058846d644d98ca399d405e5e">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.karumi-dexter-2.3.1_f5c7dc762622f3b896159db0775ad86d294e0e93/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -124,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="c40179c620e1840133135f37bcf13a098dcae969">
+        sha1="39037452292b05adc4aa97f05f76fdb4a07ee291">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_94287130417e98fad62bc6b3065a556aba657297/classes.dex" />
     </item>
     <item
@@ -135,6 +153,15 @@
         revision="24.0.2"
         sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3cb68e81178e0b1ef4123c8fd1b879b409a215c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.6_14eb4ba870dd115b0e56715c5207204d0e3a5d16/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -183,12 +210,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.2.1_fad4d4f0cb3bbb9e890a713056bc7d21454d471f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_14bfe36b04797bde6f8da1dc454d7cc0634a4282/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_e77e0b85849d515624bb899ef49072b615596e8a/classes.dex" />
     </item>
 
 </items>

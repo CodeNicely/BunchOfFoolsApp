@@ -15,4 +15,6 @@
     <string name="hint_email">email</string>
     <string name="location">Location</string>
     <string name="submit">Submit</string>
+    <string name="select_images_gallery">Select From Gallery</string>
+    <string name="take_picture">Take a pic from Camera</string>
 </resources>

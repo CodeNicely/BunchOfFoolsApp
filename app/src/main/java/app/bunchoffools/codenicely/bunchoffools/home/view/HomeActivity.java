@@ -1,35 +1,37 @@
 package app.bunchoffools.codenicely.bunchoffools.home.view;
 
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.widget.Button;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
-import app.bunchoffools.codenicely.bunchoffools.spot_upload.UploadSpot;
+import app.bunchoffools.codenicely.bunchoffools.spot_upload.view.UploadSpotFragment;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImagesAdapter imagesAdapter;
-    private ViewPager viewPager;
+    @BindView(R.id.cordinatorLayout)
+    CoordinatorLayout coordinatorLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -42,25 +44,10 @@ public class HomeActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        viewPager=(ViewPager)findViewById(R.id.viewPager);
-
-        imagesAdapter=new ImagesAdapter(this);
-        imagesAdapter.setImageList(getMockImageList());
-        imagesAdapter.notifyDataSetChanged();
-        viewPager.setAdapter(imagesAdapter);
+        setFragment(new HomeFragment(),"Home");
          }
 
 
-    List<String> getMockImageList(){
-
-        List<String> imageUrlList=new ArrayList<>();
-        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/310.jpg");
-        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/410.jpg");
-        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/1.jpg");
-        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/51.jpg");
-
-        return imageUrlList;
-    }
 
     @Override
     public void onBackPressed() {
@@ -106,11 +93,11 @@ public class HomeActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            fragment=new UploadSpot();
-            title="Upload Spot";
+            fragment=new HomeFragment();
+            title="Home";
         } else if (id == R.id.nav_spot) {
 
-            fragment=new UploadSpot();
+            fragment=new UploadSpotFragment();
             title="Upload Spot";
         } else if (id == R.id.nav_gallery) {
 
@@ -124,20 +111,25 @@ public class HomeActivity extends AppCompatActivity
 
         }
 
+        setFragment(fragment,title);
 
 
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_body, fragment);
-            fragmentTransaction.commit();
-
-            // set the toolbar title
-            getSupportActionBar().setTitle(title);
-        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+void setFragment(Fragment fragment,String title){
+    if (fragment != null) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_body, fragment);
+        fragmentTransaction.commit();
+
+        // set the toolbar title
+        getSupportActionBar().setTitle(title);
+    }
+
+}
 
 }

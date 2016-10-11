@@ -1,16 +1,21 @@
 package app.bunchoffools.codenicely.bunchoffools.home.view;
 
-import android.annotation.TargetApi;
-import android.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
-import android.os.Build;
+import android.support.v4.app.Fragment;
+
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import app.bunchoffools.codenicely.bunchoffools.R;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,12 +25,17 @@ import app.bunchoffools.codenicely.bunchoffools.R;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class HomeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+
+    @BindView(R.id.viewPager)
+    ViewPager viewPager;
+
+    private ImagesAdapter imagesAdapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -68,8 +78,29 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        View view=inflater.inflate(R.layout.fragment_home, container, false);
+        ButterKnife.bind(this, view);
+
+        imagesAdapter=new ImagesAdapter(getContext());
+        imagesAdapter.setImageList(getMockImageList());
+        imagesAdapter.notifyDataSetChanged();
+        viewPager.setAdapter(imagesAdapter);
+
+        return view;
     }
+
+    List<String> getMockImageList(){
+
+        List<String> imageUrlList=new ArrayList<>();
+        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/310.jpg");
+        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/410.jpg");
+        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/1.jpg");
+        imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/51.jpg");
+
+        return imageUrlList;
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -81,13 +112,13 @@ public class HomeFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
+  }
 
     @Override
     public void onDetach() {
