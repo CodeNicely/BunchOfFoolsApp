@@ -1,21 +1,19 @@
 package app.bunchoffools.codenicely.bunchoffools.spot_upload.view;
 
 import android.Manifest;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.util.TimeUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -35,17 +34,13 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.List;
-import java.util.Random;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.RetrofitUploadSpotProvider;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter.UploadSpotPresenter;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter.UploadSpotPresenterImpl;
 import app.bunchoffools.codenicely.bunchoffools.utils.utils.BitmapUtils;
-import app.bunchoffools.codenicely.bunchoffools.utils.utils.FileUtils;
 import app.bunchoffools.codenicely.bunchoffools.utils.utils.UriUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -60,7 +55,7 @@ import static android.app.Activity.RESULT_OK;
  * Use the {@link UploadSpotFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class UploadSpotFragment extends Fragment implements UploadSpotView{
+public class UploadSpotFragment extends Fragment implements UploadSpotView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -71,13 +66,16 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
     private static final int CAMERA_REQUEST_ID = 100;
     private final int GALLERY_REQUEST_ID = 1;
     private UploadSpotPresenter uploadSpotPresenter;
-    private File image=null;
+    private File image = null;
 
     @BindView(R.id.galleryButton)
     Button galleryButton;
 
     @BindView(R.id.cameraButton)
     Button cameraButton;
+
+    @BindView(R.id.submitButton)
+    Button submitButton;
 
     @BindView(R.id.name)
     EditText nameEditText;
@@ -95,7 +93,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
     ImageView imageView;
 
     private Bitmap bitmap;
-    private Uri imageUri;
+    private Uri imageUri=null;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -137,11 +135,11 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_upload_spot, container, false);
+        View view = inflater.inflate(R.layout.fragment_upload_spot, container, false);
 
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         Dexter.initialize(getContext());
-        uploadSpotPresenter=new UploadSpotPresenterImpl(this,new RetrofitUploadSpotProvider());
+        uploadSpotPresenter = new UploadSpotPresenterImpl(this, new RetrofitUploadSpotProvider(getContext()));
 
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,6 +163,43 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
             }
         });
 
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String name = nameEditText.getText().toString();
+                String mobile = mobileEditText.getText().toString();
+                String email = emailEditText.getText().toString();
+                String location = locationEditText.getText().toString();
+
+
+                if (name.equals("") || name.equals(null)) {
+                    nameEditText.setError("Please enter Name");
+                    nameEditText.requestFocus();
+                } else if (mobile.equals("") || mobile.equals(null)) {
+                    mobileEditText.setError("Please enter mobile");
+                    mobileEditText.requestFocus();
+                } else if (email.equals("") || email.equals(null)) {
+                    emailEditText.setError("Please enter Email");
+                    emailEditText.requestFocus();
+                } else if (location.equals("") || location.equals(null)) {
+                    locationEditText.setError("Please enter location");
+                    locationEditText.requestFocus();
+                } else if (imageUri == null) {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "You've not selected any image to upload.", Snackbar.LENGTH_LONG)
+                            //     .setAction("Undo", mOnClickListener)
+                            .setActionTextColor(Color.RED)
+                            .show();
+                } else {
+                    uploadSpotPresenter.uploadSpot(nameEditText.getText().toString(),
+                            mobileEditText.getText().toString(), emailEditText.getText().toString(),
+                            locationEditText.getText().toString(), image);
+
+                }
+            }
+        });
+
         return view;
     }
 
@@ -174,13 +209,12 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
         super.onActivityResult(requestCode, resultCode, data);
 
 
-
         if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imageUri = data.getData();
             try {
                 //Getting the Bitmap from Gallery
                 // bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
-                if(imageUri!=null) {
+                if (imageUri != null) {
                     bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                     imageView.setImageBitmap(bitmap);
                 }
@@ -189,12 +223,12 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
                 e.printStackTrace();
             }
 
-        }else if(requestCode == CAMERA_REQUEST_ID && resultCode == RESULT_OK ){
+        } else if (requestCode == CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
 
-        //    imageUri=data.getData();
-            imageUri=Uri.fromFile(image);
+            //    imageUri=data.getData();
+            imageUri = Uri.fromFile(image);
             try {
-                bitmap=BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(getContext(),imageUri));
+                bitmap = BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(getContext(), imageUri));
                 imageView.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -249,7 +283,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
         if (ContextCompat.checkSelfPermission(getContext(),
                 Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
                 ContextCompat.checkSelfPermission(getContext(),
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
             return true;
         else
             return false;
@@ -266,6 +300,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
             return false;
 
     }
+
     @Override
     public boolean requestCameraPermission() {
 
@@ -362,7 +397,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView{
     public void fileFromPath(String filePath) {
 
         image = new File(filePath);
-        Log.i(TAG,"fileFromPath method : "+image.getPath());
+        Log.i(TAG, "fileFromPath method : " + image.getPath());
 
     }
 }
