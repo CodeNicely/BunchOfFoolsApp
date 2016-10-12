@@ -14,7 +14,7 @@ import rx.Observable;
 
 public class MockUploadSpotProvider implements UploadSpotProvider{
     @Override
-    public Observable<SpotUploadData> uploadSpot(String name, String mobile, String email, String location, File imageUri) throws IOException {
+    public Observable<SpotUploadData> uploadSpot(String name, String mobile, String email, String location, Uri imageUri) throws IOException {
         return null;
     }
 }

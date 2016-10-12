@@ -21,6 +21,6 @@ public interface UploadSpotPresenter {
      */
     void openGallery();
 
-    void uploadSpot(String name, String mobile, String email, String location, File imageFile);
+    void uploadSpot(String name, String mobile, String email, String location, Uri imageUri);
 
 }

@@ -1,9 +1,9 @@
 package app.bunchoffools.codenicely.bunchoffools.spot_upload.api;
 
+import app.bunchoffools.codenicely.bunchoffools.helper.Urls;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.data.SpotUploadData;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import retrofit2.Retrofit;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;

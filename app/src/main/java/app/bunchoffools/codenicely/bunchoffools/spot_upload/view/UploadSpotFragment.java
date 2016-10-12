@@ -194,7 +194,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
                 } else {
                     uploadSpotPresenter.uploadSpot(nameEditText.getText().toString(),
                             mobileEditText.getText().toString(), emailEditText.getText().toString(),
-                            locationEditText.getText().toString(), image);
+                            locationEditText.getText().toString(), imageUri);
 
                 }
             }

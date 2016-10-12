@@ -16,6 +16,6 @@ public interface UploadSpotProvider {
 
 
     Observable<SpotUploadData> uploadSpot(String name,String mobile,String email,
-                                                                      String location,File imageFile) throws IOException;
+                                                                      String location,Uri imageUri) throws IOException;
 
 }

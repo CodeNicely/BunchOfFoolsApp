@@ -21,12 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.2/a60c039ba54c73d1133b72178e1b04133c73d13d/adapter-rxjava-2.0.2.jar"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="a60c039ba54c73d1133b72178e1b04133c73d13d">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.0.2_c541405bd47cb635d1f42dd06796f9dbfd0818e4/classes.dex" />
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_4db4019ad5781a3b8800e21faf68b992fc0df2c9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="e0de41903adcf7771bc70d39534d33596d42913e">
+        sha1="d8aa0639f8ddd67f86e2f0f52a2b41ca034f1464">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_94287130417e98fad62bc6b3065a556aba657297/classes.dex" />
     </item>
     <item
@@ -138,12 +138,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.8.0_7e698a82eb7b241230fe1d168d5903962ff6aaa8/classes.dex" />
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.1_6f4bb74b304215244d5c13fd73a959917902e407/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -162,6 +162,15 @@
         revision="24.0.2"
         sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_794a9f3520c9f0033d4c6de363dbf07f784ae580/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.1.0_fde9774cbdfae0976a1b199958f059d1881a6473/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -210,15 +219,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.0_97530b5bc3fce3980fe1a3b0c4bb0f7455f4387c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -232,7 +232,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="b655bc425a3a880602649677328524926a05abe0">
+        sha1="d50d967b60f2c26455099c491e2b8deb34f99a09">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55237357f500d953fce70396db6ee48acfaae80e/classes.dex" />
     </item>
     <item
@@ -243,6 +243,15 @@
         revision="24.0.2"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9bae206ce00be3c9bde0e6793be176d7f69ab7a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.4.1/381fc1096ba65040d8e80ea43b2e1d9bad02345e/logging-interceptor-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.4.1_164a29c8821885c0e3f4aebef84d2d1e337a6369/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -270,15 +279,6 @@
         revision="24.0.2"
         sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.6_14eb4ba870dd115b0e56715c5207204d0e3a5d16/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.2.0/a56f28d5b7fab623c6c1d2afa08dd496d873ac21/logging-interceptor-3.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.2.0_fab8c1522c8939ce27fff11180494a59fc0bb5c1/classes.dex" />
     </item>
     <item
         is-multidex="true"

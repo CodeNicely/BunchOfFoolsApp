@@ -2,6 +2,7 @@ package app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter;
 
 
 import android.net.Uri;
+import android.util.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +25,7 @@ import static app.bunchoffools.codenicely.bunchoffools.helper.FileProvider.reque
 public class UploadSpotPresenterImpl implements UploadSpotPresenter{
 
 
+    private static final String TAG = "UploadSpotPresenterImpl" ;
     private UploadSpotView uploadSpotView;
     private UploadSpotProvider uploadSpotProvider;
     private Observable<SpotUploadData> spotUploadDataObservable;
@@ -65,14 +67,17 @@ public class UploadSpotPresenterImpl implements UploadSpotPresenter{
 
     }
 
+
+
     @Override
-    public void uploadSpot(String name, String mobile, String email, String location, File imageFile) {
+    public void uploadSpot(String name, String mobile, String email, String location, Uri imageUri) {
 
 
         uploadSpotView.showLoader(true);
         try {
-            spotUploadDataObservable=uploadSpotProvider.uploadSpot(name,mobile,email,location,imageFile);
-            subscription=spotUploadDataObservable.subscribeOn(Schedulers.io()).
+            spotUploadDataObservable=uploadSpotProvider.uploadSpot(name,mobile,email,location,imageUri);
+            Log.i(TAG,"Value of Observable"+spotUploadDataObservable.toString());
+            subscription=spotUploadDataObservable.subscribeOn(Schedulers.newThread()).
                     observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<SpotUploadData>() {
                 @Override
                 public void onCompleted() {
@@ -82,11 +87,13 @@ public class UploadSpotPresenterImpl implements UploadSpotPresenter{
                 @Override
                 public void onError(Throwable e) {
 
+                    e.printStackTrace();
                 }
 
                 @Override
                 public void onNext(SpotUploadData spotUploadData) {
 
+                    Log.i(TAG,"Response "+spotUploadData.toString());
                     if( spotUploadData.isSuccess()){
                         uploadSpotView.showLoader(false);
                         uploadSpotView.showMessage(spotUploadData.getMessage());
@@ -102,4 +109,6 @@ public class UploadSpotPresenterImpl implements UploadSpotPresenter{
         }
 
     }
+
+
 }
