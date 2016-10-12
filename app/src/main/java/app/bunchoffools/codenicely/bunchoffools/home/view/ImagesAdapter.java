@@ -8,12 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.GlideImageLoader;
+import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.ImageLoader;
 
 /**
  * Created by meghal on 11/10/16.
@@ -24,8 +25,13 @@ public class ImagesAdapter extends PagerAdapter {
     private static final String TAG ="ImagesAdapter" ;
     private List<String> imageUrlList=new ArrayList<>();
     private Context context;
-    ImagesAdapter(Context context){
+    private ImageLoader imageLoader;
+    ImagesAdapter(Context context)
+
+    {
         this.context=context;
+        imageLoader=new GlideImageLoader(context);
+
     }
 
 
@@ -40,7 +46,8 @@ public class ImagesAdapter extends PagerAdapter {
             View view = layoutInflater.inflate(R.layout.item_image, container, false);
         container.addView(view);
         ImageView imageView=(ImageView) view.findViewById(R.id.imageView);
-        Picasso.with(context).load(imageUrlList.get(position)).into(imageView);
+
+        imageLoader.loadImage(imageUrlList.get(position),imageView);
         return view;
     }
 

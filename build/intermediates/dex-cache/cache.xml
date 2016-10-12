@@ -57,15 +57,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_ad8e32cc26ebb8eb832f56d86768c0cfcdd9cfdd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.karumi/dexter/2.3.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -171,6 +162,15 @@
         revision="24.0.2"
         sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.1.0_fde9774cbdfae0976a1b199958f059d1881a6473/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_6d40c4ab9cd9675262d94fd9f8683cbcd0a4e60d/classes.dex" />
     </item>
     <item
         is-multidex="true"

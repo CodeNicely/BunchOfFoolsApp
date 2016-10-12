@@ -271,7 +271,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
     public void showMessage(String message) {
 
         Snackbar snackbar = Snackbar
-                .make(getActivity().findViewById(R.id.cordinatorLayout), "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
 
         snackbar.show();
     }

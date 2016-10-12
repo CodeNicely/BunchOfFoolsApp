@@ -102,10 +102,11 @@ public class HomeActivity extends AppCompatActivity
             title="Upload Spot";
         } else if (id == R.id.nav_gallery) {
 
-            fragment=new JoinUsFragment();
-            title="Join Us";
 
         } else if (id == R.id.nav_join) {
+
+            fragment=new JoinUsFragment();
+            title="Join Us";
 
         } else if (id == R.id.nav_about) {
 
