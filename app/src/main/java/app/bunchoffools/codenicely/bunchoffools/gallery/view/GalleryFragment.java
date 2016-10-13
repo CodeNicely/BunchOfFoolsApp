@@ -3,12 +3,22 @@ package app.bunchoffools.codenicely.bunchoffools.gallery.view;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.gallery.model.RetrofitGalleryProvider;
+import app.bunchoffools.codenicely.bunchoffools.gallery.model.data.GalleryData;
+import app.bunchoffools.codenicely.bunchoffools.gallery.presenter.GalleryPresenter;
+import app.bunchoffools.codenicely.bunchoffools.gallery.presenter.GalleryPresenterImpl;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,12 +28,19 @@ import app.bunchoffools.codenicely.bunchoffools.R;
  * Use the {@link GalleryFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class GalleryFragment extends Fragment {
+public class GalleryFragment extends Fragment implements GalleryView{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private GalleryAdapter galleryAdapter;
+    private GalleryPresenter galleryPresenter;
 
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
+
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -65,7 +82,21 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        View view=inflater.inflate(R.layout.fragment_gallery, container, false);
+
+        ButterKnife.bind(this,view);
+
+        StaggeredGridLayoutManager staggeredGridLayoutManager=
+                new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+
+        galleryAdapter=new GalleryAdapter(getContext());
+        recyclerView.setAdapter(galleryAdapter);
+
+        galleryPresenter =new GalleryPresenterImpl(this,new RetrofitGalleryProvider());
+        galleryPresenter.getImageUrls();
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -84,6 +115,31 @@ public class GalleryFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void showLoader(boolean show) {
+
+        if(show)
+            progressBar.setVisibility(View.VISIBLE);
+        else
+            progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showMessage(String message) {
+        Snackbar snackbar = Snackbar
+                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
+
+        snackbar.show();
+
+    }
+
+    @Override
+    public void setData(GalleryData galleryData) {
+
+        galleryAdapter.setImageUrlList(galleryData.getGallery_images());
+        galleryAdapter.notifyDataSetChanged();
     }
 
     /**

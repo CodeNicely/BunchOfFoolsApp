@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.join_us.model.RetrofitJoinUsProvider;
 import app.bunchoffools.codenicely.bunchoffools.join_us.model.VolleyJoinUsProvider;
@@ -105,7 +108,6 @@ public class JoinUsFragment extends Fragment implements JoinUsView{
                 String name1=name.getText().toString().trim();
                 String mobile1=mobile.getText().toString().trim();
                 String email1=email.getText().toString().trim();
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 if(name1.equals("") || name1.equals(null)){
                     name.setError("Please fill name", ContextCompat.getDrawable
@@ -120,7 +122,7 @@ public class JoinUsFragment extends Fragment implements JoinUsView{
                     email.setError("Please enter Email Id",ContextCompat.getDrawable
                             (getContext(),R.drawable.ic_error_blue_grey_500_24dp));
                     email.requestFocus();
-                }else if(!email1.equals(emailPattern)){
+                }else if(!validate(email1)){
                     email.setError("Invalid Email Address",ContextCompat.getDrawable
                             (getContext(),R.drawable.ic_error_blue_grey_500_24dp));
                     email.requestFocus();
@@ -136,6 +138,14 @@ public class JoinUsFragment extends Fragment implements JoinUsView{
 
 
         return view;
+    }
+
+    public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean validate(String emailStr) {
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX .matcher(emailStr);
+        return matcher.find();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
