@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitHomeProvider implements HomeProvider{
 
     private HomeApi homeApi;
-    RetrofitHomeProvider(){
+    public RetrofitHomeProvider(){
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);

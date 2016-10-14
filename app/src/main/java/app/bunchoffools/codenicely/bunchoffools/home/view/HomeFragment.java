@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitHomeProvider;
 import app.bunchoffools.codenicely.bunchoffools.home.model.data.HomeData;
+import app.bunchoffools.codenicely.bunchoffools.home.presenter.HomePresenter;
+import app.bunchoffools.codenicely.bunchoffools.home.presenter.HomePresenterImpl;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -49,6 +53,9 @@ public class HomeFragment extends Fragment implements HomeView {
     @BindView(R.id.homeLayout)
     LinearLayout homeLayout;
     private ImagesAdapter imagesAdapter;
+
+    private HomePresenter homePresenter;
+    private FacebookAdapter facebookAdapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -95,7 +102,14 @@ public class HomeFragment extends Fragment implements HomeView {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
 
+        homePresenter=new HomePresenterImpl(this,new RetrofitHomeProvider());
+        homePresenter.requestHome();
         imagesAdapter = new ImagesAdapter(getContext());
+        facebookAdapter=new FacebookAdapter(getContext());
+        recyclerView.setAdapter(facebookAdapter);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
     //    imagesAdapter.setImageList(getMockImageList());
     //    imagesAdapter.notifyDataSetChanged();
         viewPager.setAdapter(imagesAdapter);
@@ -167,6 +181,11 @@ public class HomeFragment extends Fragment implements HomeView {
 
         imagesAdapter.setImageList(homeData.getSlider_data());
         imagesAdapter.notifyDataSetChanged();
+
+        facebookAdapter.setData(homeData.getFeeds().getData());
+        facebookAdapter.notifyDataSetChanged();
+
+
 
 
 

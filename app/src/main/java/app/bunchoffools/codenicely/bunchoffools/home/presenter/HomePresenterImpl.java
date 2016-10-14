@@ -31,6 +31,8 @@ public class HomePresenterImpl implements HomePresenter {
                 homeView.showLoader(false);
                 if(homeData.isSuccess()){
 
+                    homeView.setData(homeData);
+                    homeView.showMessage(homeData.getMessage());
 
                 }
             }
