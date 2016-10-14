@@ -50,6 +50,9 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     @BindView(R.id.imageView)
     ImageView imageView;
 
+    @BindView(R.id.imageProgressBar)
+    ProgressBar imageProgressBar;
+
     private OnFragmentInteractionListener mListener;
 
     public AboutUsFragment() {
@@ -145,7 +148,7 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     public void setData(AboutUsData aboutUsData) {
 
 
-        imageLoader.loadImage(aboutUsData.getImage_url(),imageView);
+        imageLoader.loadImage(aboutUsData.getImage_url(),imageView,imageProgressBar);
         description.setText(aboutUsData.getDescription());
 
         imageView.setVisibility(View.VISIBLE);

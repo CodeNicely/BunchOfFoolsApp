@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
 import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.GlideImageLoader;
 import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.ImageLoader;
+import app.bunchoffools.codenicely.bunchoffools.home.model.data.HomeSliderData;
 
 /**
  * Created by meghal on 11/10/16.
@@ -23,7 +25,7 @@ import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.ImageLoader;
 public class ImagesAdapter extends PagerAdapter {
 
     private static final String TAG ="ImagesAdapter" ;
-    private List<String> imageUrlList=new ArrayList<>();
+    private List<HomeSliderData> homeSliderDataList=new ArrayList<>();
     private Context context;
     private ImageLoader imageLoader;
     ImagesAdapter(Context context)
@@ -35,8 +37,8 @@ public class ImagesAdapter extends PagerAdapter {
     }
 
 
-    public void setImageList(List<String> imageUrlList){
-        this.imageUrlList=imageUrlList;
+    public void setImageList(List<HomeSliderData> homeSliderDataList){
+        this.homeSliderDataList=homeSliderDataList;
     }
 
     @Override
@@ -46,15 +48,15 @@ public class ImagesAdapter extends PagerAdapter {
             View view = layoutInflater.inflate(R.layout.item_image, container, false);
         container.addView(view);
         ImageView imageView=(ImageView) view.findViewById(R.id.imageView);
-
-        imageLoader.loadImage(imageUrlList.get(position),imageView);
+        ProgressBar imageProgressBar=(ProgressBar)view.findViewById(R.id.imageProgressBar);
+        imageLoader.loadImage(homeSliderDataList.get(position).getImage_url(),imageView,imageProgressBar);
         return view;
     }
 
     @Override
     public int getCount() {
-        Log.d(TAG, "getCount: "+imageUrlList.size());
-        return imageUrlList.size();
+        Log.d(TAG, "getCount: "+homeSliderDataList.size());
+        return homeSliderDataList.size();
     }
 
     @Override

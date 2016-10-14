@@ -1,6 +1,7 @@
 package app.bunchoffools.codenicely.bunchoffools.spot_upload.view;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -67,6 +68,9 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
     private final int GALLERY_REQUEST_ID = 1;
     private UploadSpotPresenter uploadSpotPresenter;
     private File image = null;
+
+    private ProgressDialog progressDialog;
+
 
     @BindView(R.id.galleryButton)
     Button galleryButton;
@@ -139,6 +143,11 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
 
         ButterKnife.bind(this, view);
         Dexter.initialize(getContext());
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Submitting . . .");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
         uploadSpotPresenter = new UploadSpotPresenterImpl(this, new RetrofitUploadSpotProvider(getContext()));
 
         galleryButton.setOnClickListener(new View.OnClickListener() {
@@ -265,6 +274,10 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
     @Override
     public void showLoader(boolean show) {
 
+        if(show)
+            progressDialog.show();
+        else
+            progressDialog.hide();
     }
 
     @Override

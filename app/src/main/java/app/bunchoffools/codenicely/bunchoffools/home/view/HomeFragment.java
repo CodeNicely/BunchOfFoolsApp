@@ -2,18 +2,23 @@ package app.bunchoffools.codenicely.bunchoffools.home.view;
 
 import android.content.Context;
 import android.net.Uri;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.home.model.data.HomeData;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -25,7 +30,7 @@ import butterknife.ButterKnife;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements HomeView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,6 +40,14 @@ public class HomeFragment extends Fragment {
     @BindView(R.id.viewPager)
     ViewPager viewPager;
 
+    @BindView(R.id.recyclerView)
+    RecyclerView recyclerView;
+
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+
+    @BindView(R.id.homeLayout)
+    LinearLayout homeLayout;
     private ImagesAdapter imagesAdapter;
 
     // TODO: Rename and change types of parameters
@@ -79,20 +92,20 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view=inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
 
-        imagesAdapter=new ImagesAdapter(getContext());
-        imagesAdapter.setImageList(getMockImageList());
-        imagesAdapter.notifyDataSetChanged();
+        imagesAdapter = new ImagesAdapter(getContext());
+    //    imagesAdapter.setImageList(getMockImageList());
+    //    imagesAdapter.notifyDataSetChanged();
         viewPager.setAdapter(imagesAdapter);
 
         return view;
     }
 
-    List<String> getMockImageList(){
+    List<String> getMockImageList() {
 
-        List<String> imageUrlList=new ArrayList<>();
+        List<String> imageUrlList = new ArrayList<>();
         imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/310.jpg");
         imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/410.jpg");
         imageUrlList.add("http://bunchofools.com/wp/wp-content/uploads/2015/10/1.jpg");
@@ -118,12 +131,46 @@ public class HomeFragment extends Fragment {
 //            throw new RuntimeException(context.toString()
 //                    + " must implement OnFragmentInteractionListener");
 //        }
-  }
+    }
 
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void showLoader(boolean show) {
+
+        if (show) {
+            progressBar.setVisibility(View.VISIBLE);
+            homeLayout.setVisibility(View.GONE);
+        } else {
+            progressBar.setVisibility(View.GONE);
+            homeLayout.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public void showMessage(String message) {
+
+        Snackbar snackbar = Snackbar
+                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
+
+        snackbar.show();
+
+    }
+
+    @Override
+    public void setData(HomeData homeData) {
+
+
+        imagesAdapter.setImageList(homeData.getSlider_data());
+        imagesAdapter.notifyDataSetChanged();
+
+
+
+
     }
 
     /**

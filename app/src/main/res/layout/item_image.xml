@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="8dp"
+    android:padding="2dp"
+
     android:layout_height="wrap_content" android:layout_width="match_parent">
 
+    <ProgressBar
+        android:id="@+id/imageProgressBar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 <ImageView
+    android:layout_centerInParent="true"
     android:id="@+id/imageView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/bunchofoolslogo"
-    android:minHeight="200dp"
     android:minWidth="150dp"
     />
-</LinearLayout>
+</RelativeLayout>

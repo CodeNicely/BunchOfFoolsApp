@@ -36,7 +36,9 @@
             android:id="@+id/mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_mobile" />
+            android:hint="@string/hint_mobile"
+            android:inputType="phone"
+            />
 
     </android.support.design.widget.TextInputLayout>
 

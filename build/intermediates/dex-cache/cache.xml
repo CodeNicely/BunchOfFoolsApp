@@ -75,11 +75,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.timehop.stickyheadersrecyclerview/library/0.4.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="23bbdaadbcb0f011e809e07ae0a91e24fa55365d">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.timehop.stickyheadersrecyclerview-library-0.4.3_2a9d9a5871e4333afc8fafb1895c0be56d4c5750/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="46850c10421ce6d3ec09b724839aa482db27a936">
+        sha1="a8424553475dfcb37428eec4ac48ec3aee960924">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_94287130417e98fad62bc6b3065a556aba657297/classes.dex" />
     </item>
     <item
@@ -228,11 +237,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.fenchtose.nocropper/nocropper/0.1.6/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="219a50124b4a16cfe4eb63636c6cd119e559baa4">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.fenchtose.nocropper-nocropper-0.1.6_da9fc4cf72480fd1b3dac1a4d2b1ed892564625a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="da5583d6d566dbd7e5137a5ba88aed5d5df802e7">
+        sha1="633f21108f852dbb48230ab0e42e0ab6129eda50">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55237357f500d953fce70396db6ee48acfaae80e/classes.dex" />
     </item>
     <item

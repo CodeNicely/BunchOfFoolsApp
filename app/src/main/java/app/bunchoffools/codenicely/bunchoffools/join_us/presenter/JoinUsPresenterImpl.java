@@ -28,11 +28,11 @@ public class JoinUsPresenterImpl implements JoinUsPresenter {
             public void onSuccess(JoinUsData joinUsData) {
 
                 joinUsView.showLoading(false);
-              //  if(joinUsData.isSuccess()){
-//                    joinUsView.showMessage(joinUsData.getMessage());
-              //  }else{
-                    joinUsView.showMessage("Failed");
-              //  }
+                if(joinUsData.isSuccess()){
+                    joinUsView.showMessage(joinUsData.getMessage());
+                }else{
+                    joinUsView.showMessage(joinUsData.getMessage());
+                }
 
 
             }

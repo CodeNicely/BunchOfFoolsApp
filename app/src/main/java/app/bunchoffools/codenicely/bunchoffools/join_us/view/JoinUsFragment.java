@@ -33,7 +33,7 @@ import butterknife.ButterKnife;
  * Use the {@link JoinUsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class JoinUsFragment extends Fragment implements JoinUsView{
+public class JoinUsFragment extends Fragment implements JoinUsView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -95,46 +95,45 @@ public class JoinUsFragment extends Fragment implements JoinUsView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_join_us, container, false);
-        ButterKnife.bind(this,view);
+        View view = inflater.inflate(R.layout.fragment_join_us, container, false);
+        ButterKnife.bind(this, view);
 
-        final JoinUsPresenter joinUsPresenter=new JoinUsPresenterImpl(this,new RetrofitJoinUsProvider());
+        final JoinUsPresenter joinUsPresenter = new JoinUsPresenterImpl(this, new RetrofitJoinUsProvider());
 
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String name1=name.getText().toString().trim();
-                String mobile1=mobile.getText().toString().trim();
-                String email1=email.getText().toString().trim();
+                String name1 = name.getText().toString().trim();
+                String mobile1 = mobile.getText().toString().trim();
+                String email1 = email.getText().toString().trim();
 
-                if(name1.equals("") || name1.equals(null)){
+                if (name1.equals("") || name1.equals(null)) {
                     name.setError("Please fill name", ContextCompat.getDrawable
-                            (getContext(),R.drawable.ic_error_blue_grey_500_24dp));
+                            (getContext(), R.drawable.ic_error_blue_grey_500_24dp));
                     name.requestFocus();
 
-                }else if(mobile1.equals("") || mobile1.equals(null)){
-                    mobile.setError("Please fill mobile number",ContextCompat.getDrawable
-                            (getContext(),R.drawable.ic_error_blue_grey_500_24dp));
+                } else if (mobile1.equals("") || mobile1.equals(null)) {
+                    mobile.setError("Please fill mobile number", ContextCompat.getDrawable
+                            (getContext(), R.drawable.ic_error_blue_grey_500_24dp));
                     mobile.requestFocus();
-                }else if(email1.equals("") || email1.equals("")){
-                    email.setError("Please enter Email Id",ContextCompat.getDrawable
-                            (getContext(),R.drawable.ic_error_blue_grey_500_24dp));
+                } else if (email1.equals("") || email1.equals("")) {
+                    email.setError("Please enter Email Id", ContextCompat.getDrawable
+                            (getContext(), R.drawable.ic_error_blue_grey_500_24dp));
                     email.requestFocus();
-                }else if(!validate(email1)){
-                    email.setError("Invalid Email Address",ContextCompat.getDrawable
-                            (getContext(),R.drawable.ic_error_blue_grey_500_24dp));
+                } else if (!validate(email1)) {
+                    email.setError("Invalid Email Address", ContextCompat.getDrawable
+                            (getContext(), R.drawable.ic_error_blue_grey_500_24dp));
                     email.requestFocus();
 
 
+                } else {
+
+                    joinUsPresenter.requestJoin(name1, mobile1, email1);
                 }
-
-                joinUsPresenter.requestJoin(name1,mobile1,email1);
-
             }
         });
-
 
 
         return view;
@@ -144,7 +143,7 @@ public class JoinUsFragment extends Fragment implements JoinUsView{
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
     public static boolean validate(String emailStr) {
-        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX .matcher(emailStr);
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
         return matcher.find();
     }
 
@@ -177,7 +176,7 @@ public class JoinUsFragment extends Fragment implements JoinUsView{
     @Override
     public void showLoading(boolean show) {
 
-        if(show)
+        if (show)
             progressBar.setVisibility(View.VISIBLE);
         else
             progressBar.setVisibility(View.GONE);

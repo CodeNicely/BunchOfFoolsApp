@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-        View view=layoutInflater.inflate(R.layout.item_image,parent,false);
+        View view=layoutInflater.inflate(R.layout.gallery_item,parent,false);
 
         return new ImageViewHolder(view);
 
@@ -49,7 +50,9 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         ImageViewHolder imageViewHolder=(ImageViewHolder)holder;
-        imageLoader.loadImage(imageUrlList.get(position),imageViewHolder.imageView);
+
+        imageLoader.loadImage(imageUrlList.get(position),imageViewHolder.imageView,imageViewHolder.progressBar);
+
 
     }
     @Override
@@ -66,11 +69,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 //        @BindView(R.id.imageView)
         ImageView imageView;
+        ProgressBar progressBar;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
             imageView=(ImageView)itemView.findViewById(R.id.imageView);
-
+            progressBar=(ProgressBar)itemView.findViewById(R.id.imageProgressBar);
         }
     }
 

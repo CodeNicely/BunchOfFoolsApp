@@ -5,11 +5,17 @@ import android.graphics.Bitmap;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.bumptech.glide.request.target.Target;
 
 /**
  * Created by meghal on 13/10/16.
@@ -28,7 +34,7 @@ public class GlideImageLoader implements ImageLoader {
     }
 
     @Override
-    public void loadImage(String url, final ImageView imageView) {
+    public void loadImage(String url, final ImageView imageView, final ProgressBar progressBar) {
         Log.d("Response",url);
 //        url = url.replace("\"", "");
 
@@ -37,9 +43,22 @@ public class GlideImageLoader implements ImageLoader {
 
         requestManager.load(url).crossFade().thumbnail(0.05f);
 
-        requestManager.load(url).crossFade().thumbnail(0.01f)
+        requestManager.load(url).crossFade().thumbnail(0.01f).listener(new RequestListener<String, GlideDrawable>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+
+                progressBar.setVisibility(View.GONE);
+                return false;
+            }
+        }).diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 //.animate(R.anim.image_animation)
                 .into(imageView);
+
 
 
         // This code is used for Round Image View using Glide :)

@@ -28,7 +28,10 @@ public class AboutUsPresenterImpl implements AboutUsPresenter{
             @Override
             public void onSuccess(AboutUsData aboutUsData) {
 
+                aboutUsView.showLoader(false);
                 if(aboutUsData.isSuccess()){
+
+                    aboutUsView.setData(aboutUsData);
 
                 }
             }

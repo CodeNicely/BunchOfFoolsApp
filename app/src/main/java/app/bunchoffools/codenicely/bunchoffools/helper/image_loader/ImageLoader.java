@@ -1,6 +1,7 @@
 package app.bunchoffools.codenicely.bunchoffools.helper.image_loader;
 
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 /**
  * Created by meghal on 13/10/16.
@@ -8,6 +9,6 @@ import android.widget.ImageView;
 
 public interface ImageLoader {
 
-    void loadImage(String url, ImageView imageView);
+    void loadImage(String url, ImageView imageView, ProgressBar progressBar);
 //    void load_circular_image(String url, ImageView imageView);
 }
