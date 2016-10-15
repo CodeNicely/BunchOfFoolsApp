@@ -58,6 +58,8 @@ public class FbImagesAdapter extends PagerAdapter{
         View view = layoutInflater.inflate(R.layout.item_image, container, false);
         container.addView(view);
         ImageView imageView=(ImageView) view.findViewById(R.id.imageView);
+        imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getHeight();
+        imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getWidth();
         ProgressBar imageProgressBar=(ProgressBar)view.findViewById(R.id.imageProgressBar);
         imageLoader.loadImage(fbDataList.get(position).getMedia().getImage().getSrc(),imageView,imageProgressBar);
         return view;

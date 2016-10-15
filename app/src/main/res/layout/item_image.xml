@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="2dp"
-
     android:layout_height="wrap_content" android:layout_width="match_parent">
 
     <ProgressBar
@@ -16,6 +15,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:src="@drawable/bunchofoolslogo"
-    android:minWidth="150dp"
+
     />
 </RelativeLayout>

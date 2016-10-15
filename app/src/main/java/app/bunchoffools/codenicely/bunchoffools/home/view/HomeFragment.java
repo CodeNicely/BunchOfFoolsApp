@@ -186,10 +186,6 @@ public class HomeFragment extends Fragment implements HomeView {
         facebookAdapter.notifyDataSetChanged();
 
 
-
-
-
-
     }
 
     /**

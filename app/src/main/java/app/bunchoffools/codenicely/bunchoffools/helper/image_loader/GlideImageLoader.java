@@ -57,7 +57,7 @@ public class GlideImageLoader implements ImageLoader {
             }
         }).diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 //.animate(R.anim.image_animation)
-                .into(imageView);
+                .crossFade().into(imageView);
 
 
 

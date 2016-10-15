@@ -25,9 +25,8 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:elevation="8dp"
-        app:cardCornerRadius="8dp"
-        app:contentPadding="12dp"
+        app:cardCornerRadius="4dp"
+        app:contentPadding="4dp"
         android:layout_margin="4dp"
         >
 
@@ -40,7 +39,6 @@
 
 
     <android.support.v7.widget.RecyclerView
-        android:layout_margin="4dp"
         android:id="@+id/recyclerView"
         android:nestedScrollingEnabled="false"
         android:layout_below="@+id/cardView"
