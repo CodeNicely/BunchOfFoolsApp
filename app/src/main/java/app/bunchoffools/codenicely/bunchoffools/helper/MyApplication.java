@@ -14,6 +14,11 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context=this;
+
+        FontsOverride.setDefaultFont(this, "DEFAULT", "comfortaa.ttf");
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "homemade.ttf");
+        FontsOverride.setDefaultFont(this, "SERIF", "nunito.ttf");
+        FontsOverride.setDefaultFont(this, "SANS_SERIF", "patrick_hand.ttf");
     }
 
     public static Context getContext() {

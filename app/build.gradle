@@ -61,4 +61,5 @@ dependencies {
     compile 'com.fenchtose.nocropper:nocropper:0.1.6'
     compile 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
     testCompile 'junit:junit:4.12'
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'}
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+}

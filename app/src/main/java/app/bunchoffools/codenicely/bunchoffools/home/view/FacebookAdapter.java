@@ -73,8 +73,8 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         if(fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")){
             CoverViewHolder coverViewHolder=(CoverViewHolder)holder;
-          //  coverViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getImage().getHeight();
-          //  coverViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getImage().getWidth();
+          //  coverViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getCompanyImage().getHeight();
+          //  coverViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getCompanyImage().getWidth();
 
             coverViewHolder.fbImagesAdapter.setData(fbDetailsList.get(position).getAttachments().getData()
                     .get(0).getSubattachments().getData());

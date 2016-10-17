@@ -18,4 +18,6 @@
     <string name="select_images_gallery">Select From Gallery</string>
     <string name="take_picture">Take a pic from Camera</string>
     <string name="contact_us">Contact Us</string>
+    <string name="developers">Developers</string>
+    <string name="about_developers">About Developers</string>
 </resources>

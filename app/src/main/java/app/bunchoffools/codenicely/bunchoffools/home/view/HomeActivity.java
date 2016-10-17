@@ -18,6 +18,7 @@ import android.widget.Button;
 import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.about_us.view.AboutUsFragment;
 import app.bunchoffools.codenicely.bunchoffools.contact_us.view.ContactUsFragment;
+import app.bunchoffools.codenicely.bunchoffools.developers.view.DeveloperFragment;
 import app.bunchoffools.codenicely.bunchoffools.gallery.view.GalleryFragment;
 import app.bunchoffools.codenicely.bunchoffools.join_us.view.JoinUsFragment;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.view.UploadSpotFragment;
@@ -117,6 +118,8 @@ public class HomeActivity extends AppCompatActivity
             fragment=new AboutUsFragment();
             title="About Us";
         } else if (id == R.id.nav_developers) {
+            fragment=new DeveloperFragment();
+            title="Developers";
 
         }else if (id == R.id.nav_contact) {
             fragment=new ContactUsFragment();
