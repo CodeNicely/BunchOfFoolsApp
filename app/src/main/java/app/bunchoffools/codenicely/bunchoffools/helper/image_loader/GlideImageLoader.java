@@ -39,11 +39,11 @@ public class GlideImageLoader implements ImageLoader {
 //        url = url.replace("\"", "");
 
 
-        requestManager.load(url).crossFade().thumbnail(0.1f);
+//        requestManager.load(url).crossFade().thumbnail(0.1f);
 
-        requestManager.load(url).crossFade().thumbnail(0.05f);
+  //      requestManager.load(url).crossFade().thumbnail(0.05f);
 
-        requestManager.load(url).crossFade().thumbnail(0.01f).listener(new RequestListener<String, GlideDrawable>() {
+        requestManager.load(url).crossFade().thumbnail(0.1f).listener(new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
                 return false;

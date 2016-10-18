@@ -60,10 +60,10 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         if(viewType== VIEW_TYPE_ALBUM){
-            View view=layoutInflater.inflate(R.layout.item_cover,parent,false);
-            return new CoverViewHolder(view);
+            View view=layoutInflater.inflate(R.layout.home_item_album,parent,false);
+            return new AlbumViewHolder(view);
         }else{
-            View view=layoutInflater.inflate(R.layout.item_other,parent,false);
+            View view=layoutInflater.inflate(R.layout.home_item_other,parent,false);
             return new OtherViewHolder(view);
         }
     }
@@ -72,23 +72,23 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         if(fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")){
-            CoverViewHolder coverViewHolder=(CoverViewHolder)holder;
-          //  coverViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getCompanyImage().getHeight();
-          //  coverViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getCompanyImage().getWidth();
+            AlbumViewHolder albumViewHolder =(AlbumViewHolder)holder;
+        //    albumViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getImage().getHeight();
+        //    albumViewHolder.viewPager.getLayoutParams().width=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getImage().getWidth();
 
-            coverViewHolder.fbImagesAdapter.setData(fbDetailsList.get(position).getAttachments().getData()
+            albumViewHolder.fbImagesAdapter.setData(fbDetailsList.get(position).getAttachments().getData()
                     .get(0).getSubattachments().getData());
-            coverViewHolder.fbImagesAdapter.notifyDataSetChanged();
-            coverViewHolder.title.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getTitle());
-            coverViewHolder.description.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getDescription());
+            albumViewHolder.fbImagesAdapter.notifyDataSetChanged();
+            albumViewHolder.title.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getTitle());
+            albumViewHolder.description.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getDescription());
 
         }else{
             OtherViewHolder otherViewHolder=(OtherViewHolder)holder;
 
             otherViewHolder.title.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getTitle());
             otherViewHolder.description.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getDescription());
-            otherViewHolder.imageView.getLayoutParams().height = fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getHeight();
-            otherViewHolder.imageView.getLayoutParams().width = fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getWidth();
+        //    otherViewHolder.imageView.getLayoutParams().height = fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getHeight();
+        //    otherViewHolder.imageView.getLayoutParams().width = fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getWidth();
             imageLoader.loadImage(fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getSrc(),otherViewHolder.imageView,otherViewHolder.imageProgressBar);
 
         }
@@ -102,14 +102,14 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         return fbDetailsList.size();
     }
 
-    public class CoverViewHolder extends RecyclerView.ViewHolder{
+    public class AlbumViewHolder extends RecyclerView.ViewHolder{
 
 
         private TextView title;
         private ViewPager viewPager;
         private TextView description;
         private FbImagesAdapter fbImagesAdapter;
-        public CoverViewHolder(View itemView) {
+        public AlbumViewHolder(View itemView) {
             super(itemView);
             fbImagesAdapter=new FbImagesAdapter(context);
             title=(TextView)itemView.findViewById(R.id.title);

@@ -55,11 +55,11 @@ public class FbImagesAdapter extends PagerAdapter{
     public Object instantiateItem(ViewGroup container, int position) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
-        View view = layoutInflater.inflate(R.layout.item_image, container, false);
+        View view = layoutInflater.inflate(R.layout.image_item_album, container, false);
         container.addView(view);
         ImageView imageView=(ImageView) view.findViewById(R.id.imageView);
-        imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getHeight();
-        imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getWidth();
+       // imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getHeight();
+       // imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getWidth();
         ProgressBar imageProgressBar=(ProgressBar)view.findViewById(R.id.imageProgressBar);
         imageLoader.loadImage(fbDataList.get(position).getMedia().getImage().getSrc(),imageView,imageProgressBar);
         return view;
@@ -69,5 +69,11 @@ public class FbImagesAdapter extends PagerAdapter{
     public void destroyItem(ViewGroup container, int position, Object object) {
         View view = (View) object;
         container.removeView(view);
+    }
+
+    @Override
+    public float getPageWidth(int position) {
+        super.getPageWidth(position);
+        return 0.4f;
     }
 }
