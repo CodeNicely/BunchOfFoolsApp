@@ -1,9 +1,11 @@
 package app.bunchoffools.codenicely.bunchoffools.about_us.presenter;
 
+import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.about_us.AboutUsCallBack;
 import app.bunchoffools.codenicely.bunchoffools.about_us.model.AboutUsProvider;
 import app.bunchoffools.codenicely.bunchoffools.about_us.model.data.AboutUsData;
 import app.bunchoffools.codenicely.bunchoffools.about_us.view.AboutUsView;
+import app.bunchoffools.codenicely.bunchoffools.helper.MyApplication;
 
 /**
  * Created by meghal on 13/10/16.
@@ -37,6 +39,9 @@ public class AboutUsPresenterImpl implements AboutUsPresenter{
             }
             @Override
             public void onFailure() {
+
+                aboutUsView.showLoader(false);
+                aboutUsView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
 
             }
         });

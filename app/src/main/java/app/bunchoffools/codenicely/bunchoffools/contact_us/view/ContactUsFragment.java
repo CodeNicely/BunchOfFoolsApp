@@ -19,6 +19,7 @@ import app.bunchoffools.codenicely.bunchoffools.contact_us.model.RetrofitContact
 import app.bunchoffools.codenicely.bunchoffools.contact_us.model.data.ContactUsData;
 import app.bunchoffools.codenicely.bunchoffools.contact_us.presenter.ContactUsPresenter;
 import app.bunchoffools.codenicely.bunchoffools.contact_us.presenter.ContactUsPresenterImpl;
+import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.GlideImageLoader;
 import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.ImageLoader;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,6 +41,8 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ImageLoader imageLoader;
+
 
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
@@ -112,6 +115,8 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
 
         contactUsPresenter=new ContactUsPresenterImpl(this,new RetrofitContactUsProvider());
         contactUsPresenter.requestContactUs();
+
+        imageLoader=new GlideImageLoader(getContext());
         return view;
     }
 
@@ -163,6 +168,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
         website.setText(contactUsData.getWebsite());
         facebook.setText(contactUsData.getFb());
 
+        imageLoader.loadImage(contactUsData.getImage(),imageView,imageProgressBar);
 
 
 

@@ -1,9 +1,11 @@
 package app.bunchoffools.codenicely.bunchoffools.gallery.presenter;
 
+import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.gallery.GalleryCallback;
 import app.bunchoffools.codenicely.bunchoffools.gallery.model.GalleryProvider;
 import app.bunchoffools.codenicely.bunchoffools.gallery.model.data.GalleryData;
 import app.bunchoffools.codenicely.bunchoffools.gallery.view.GalleryView;
+import app.bunchoffools.codenicely.bunchoffools.helper.MyApplication;
 
 /**
  * Created by meghal on 13/10/16.
@@ -38,6 +40,8 @@ public class GalleryPresenterImpl implements GalleryPresenter {
             @Override
             public void onFailure() {
 
+                galleryView.showLoader(false);
+                galleryView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
             }
         });
 

@@ -4,6 +4,7 @@ import app.bunchoffools.codenicely.bunchoffools.gallery.GalleryCallback;
 import app.bunchoffools.codenicely.bunchoffools.gallery.api.GalleryApi;
 import app.bunchoffools.codenicely.bunchoffools.gallery.model.data.GalleryData;
 import app.bunchoffools.codenicely.bunchoffools.helper.Urls;
+import app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -12,6 +13,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache.REWRITE_CACHE_CONTROL_INTERCEPTOR;
 
 /**
  * Created by meghal on 13/10/16.
@@ -24,7 +27,8 @@ public class RetrofitGalleryProvider implements GalleryProvider {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor)
+                .addInterceptor(REWRITE_CACHE_CONTROL_INTERCEPTOR).cache(RetrofitCache.provideCache()).build();
 
 
 
@@ -52,6 +56,9 @@ public class RetrofitGalleryProvider implements GalleryProvider {
 
             @Override
             public void onFailure(Call<GalleryData> call, Throwable t) {
+
+
+                galleryCallback.onFailure();
                 t.printStackTrace();
             }
         });

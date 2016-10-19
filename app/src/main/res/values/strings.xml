@@ -20,4 +20,5 @@
     <string name="contact_us">Contact Us</string>
     <string name="developers">Developers</string>
     <string name="about_developers">About Developers</string>
+    <string name="failure_message">Unable to connect to Server</string>
 </resources>

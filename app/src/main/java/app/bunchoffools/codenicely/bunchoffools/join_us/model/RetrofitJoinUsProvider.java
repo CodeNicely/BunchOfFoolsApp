@@ -58,7 +58,7 @@ public class RetrofitJoinUsProvider implements JoinUsProvider {
             @Override
             public void onFailure(Call<JoinUsData> call, Throwable t) {
 
-
+                joinUsCallback.onFailure();
                 t.printStackTrace();
             }
         });

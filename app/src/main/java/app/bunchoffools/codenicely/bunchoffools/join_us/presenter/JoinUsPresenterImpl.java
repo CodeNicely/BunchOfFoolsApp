@@ -1,5 +1,7 @@
 package app.bunchoffools.codenicely.bunchoffools.join_us.presenter;
 
+import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.helper.MyApplication;
 import app.bunchoffools.codenicely.bunchoffools.join_us.JoinUsCallback;
 import app.bunchoffools.codenicely.bunchoffools.join_us.model.JoinUsProvider;
 import app.bunchoffools.codenicely.bunchoffools.join_us.model.data.JoinUsData;
@@ -40,6 +42,8 @@ public class JoinUsPresenterImpl implements JoinUsPresenter {
             @Override
             public void onFailure() {
 
+                joinUsView.showLoading(false);
+                joinUsView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
             }
         });
 

@@ -1,5 +1,7 @@
 package app.bunchoffools.codenicely.bunchoffools.home.presenter;
 
+import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.helper.MyApplication;
 import app.bunchoffools.codenicely.bunchoffools.home.HomeCallback;
 import app.bunchoffools.codenicely.bunchoffools.home.model.HomeProvider;
 import app.bunchoffools.codenicely.bunchoffools.home.model.data.HomeData;
@@ -40,8 +42,7 @@ public class HomePresenterImpl implements HomePresenter {
             public void onFailure() {
 
                 homeView.showLoader(false);
-                homeView.showMessage("Something Went Wrong - Unable to contact servers");
-
+                homeView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
 
             }
         });

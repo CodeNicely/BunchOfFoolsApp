@@ -9,9 +9,9 @@ import java.io.IOException;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.api.SpotUploadApi;
 import app.bunchoffools.codenicely.bunchoffools.helper.Urls;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.data.SpotUploadData;
-import app.bunchoffools.codenicely.bunchoffools.utils.utils.BitmapUtils;
-import app.bunchoffools.codenicely.bunchoffools.utils.utils.FileUtils;
-import app.bunchoffools.codenicely.bunchoffools.utils.utils.UriUtils;
+import app.bunchoffools.codenicely.bunchoffools.helper.utils.BitmapUtils;
+import app.bunchoffools.codenicely.bunchoffools.helper.utils.FileUtils;
+import app.bunchoffools.codenicely.bunchoffools.helper.utils.UriUtils;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
@@ -21,8 +21,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observable;
-
-import static app.bunchoffools.codenicely.bunchoffools.helper.MyApplication.getContext;
 
 /**
  * Created by meghal on 11/10/16.

@@ -1,9 +1,11 @@
 package app.bunchoffools.codenicely.bunchoffools.developers.presenter;
 
+import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.developers.DevelopersCallback;
 import app.bunchoffools.codenicely.bunchoffools.developers.model.DeveloperProvider;
 import app.bunchoffools.codenicely.bunchoffools.developers.model.data.DeveloperData;
 import app.bunchoffools.codenicely.bunchoffools.developers.view.DeveloperView;
+import app.bunchoffools.codenicely.bunchoffools.helper.MyApplication;
 
 /**
  * Created by meghal on 17/10/16.
@@ -40,7 +42,7 @@ public class DevelopersPresenterImpl implements DevelopersPresenter{
             public void onFailed() {
 
                 developerView.showLoading(false);
-                developerView.showMessage("Unable to connect to server");
+                developerView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
             }
         });
 

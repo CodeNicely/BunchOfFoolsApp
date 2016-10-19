@@ -22,7 +22,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -41,8 +40,8 @@ import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.RetrofitUploadSpotProvider;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter.UploadSpotPresenter;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter.UploadSpotPresenterImpl;
-import app.bunchoffools.codenicely.bunchoffools.utils.utils.BitmapUtils;
-import app.bunchoffools.codenicely.bunchoffools.utils.utils.UriUtils;
+import app.bunchoffools.codenicely.bunchoffools.helper.utils.BitmapUtils;
+import app.bunchoffools.codenicely.bunchoffools.helper.utils.UriUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

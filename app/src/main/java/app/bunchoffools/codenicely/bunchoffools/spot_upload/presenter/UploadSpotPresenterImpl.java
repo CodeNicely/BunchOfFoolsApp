@@ -7,6 +7,8 @@ import android.util.Log;
 import java.io.File;
 import java.io.IOException;
 
+import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.helper.MyApplication;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.UploadSpotProvider;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.data.SpotUploadData;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.view.UploadSpotView;
@@ -87,6 +89,8 @@ public class UploadSpotPresenterImpl implements UploadSpotPresenter{
                 @Override
                 public void onError(Throwable e) {
 
+                    uploadSpotView.showLoader(false);
+                    uploadSpotView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
                     e.printStackTrace();
                 }
 

@@ -1,5 +1,6 @@
 package app.bunchoffools.codenicely.bunchoffools.home.model;
 
+
 import app.bunchoffools.codenicely.bunchoffools.helper.Urls;
 import app.bunchoffools.codenicely.bunchoffools.home.HomeCallback;
 import app.bunchoffools.codenicely.bunchoffools.home.api.HomeApi;
@@ -13,6 +14,8 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache.REWRITE_CACHE_CONTROL_INTERCEPTOR;
+
 /**
  * Created by meghal on 15/10/16.
  */
@@ -22,9 +25,12 @@ public class RetrofitHomeProvider implements HomeProvider{
     private HomeApi homeApi;
     public RetrofitHomeProvider(){
 
+
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor)
+                .addInterceptor(REWRITE_CACHE_CONTROL_INTERCEPTOR).cache(RetrofitCache.provideCache()).build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
@@ -47,9 +53,13 @@ public class RetrofitHomeProvider implements HomeProvider{
             }
             @Override
             public void onFailure(Call<HomeData> call, Throwable t) {
+
+
+                homeCallback.onFailure();
                 t.printStackTrace();
             }
         });
 
     }
+
 }
