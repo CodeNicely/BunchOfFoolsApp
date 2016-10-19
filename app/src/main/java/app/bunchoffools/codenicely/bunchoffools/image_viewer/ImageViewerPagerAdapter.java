@@ -3,11 +3,14 @@ package app.bunchoffools.codenicely.bunchoffools.image_viewer;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.alexvasilkov.gestures.Settings;
+import com.alexvasilkov.gestures.views.GestureImageView;
 import com.fenchtose.nocropper.CropperImageView;
 import com.fenchtose.nocropper.CropperView;
 
@@ -57,7 +60,7 @@ public class ImageViewerPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(final ViewGroup container, int position) {
 
-        final CropperImageView imageView;
+        final GestureImageView imageView;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         String url = imageUrlList.get(position);
@@ -66,28 +69,33 @@ public class ImageViewerPagerAdapter extends PagerAdapter {
         Log.i(TAG, "Initiate item  Urls :" + url);
         View view = layoutInflater.inflate(R.layout.image_viewer_item, container, false);
 
-        imageView = (CropperImageView) view.findViewById(R.id.imageView);
+        imageView = (GestureImageView) view.findViewById(R.id.imageView);
+
+       // imageView.getController().getSettings()
+        //        imageView.setMaxZoom(1f);
+
+        //        .setFitMethod(Settings.Fit.INSIDE)
         ProgressBar progressBar=(ProgressBar)view.findViewById(R.id.progressBar);
 
         //   imageView.getController().getSettings().enableGestures();
         // The code is for gesture image view #
-      /*  imageView.getController().getSettings()
+        imageView.getController().getSettings()
                 .setMaxZoom(5f)
-                .setPanEnabled(false)
+                .setPanEnabled(true)
                 .setZoomEnabled(true)
                 .setDoubleTapEnabled(true)
                 .setRotationEnabled(false)
                 .setRestrictRotation(false)
-                .setOverscrollDistance(0f, 0f)
+                .setOverscrollDistance(10f, 10f)
                 .setOverzoomFactor(3f)
-                .setFillViewport(true)
                 .setFitMethod(Settings.Fit.INSIDE)
-                .setGravity(Gravity.CENTER)
-        ;
+                //.setFillViewport(true)
+            //    .setFitMethod(Settings.Fit.INSIDE)
+                .setGravity(Gravity.CENTER);
         if (context instanceof ImageViewerActivity) {
             ((ImageViewerActivity) context).enableScroll(imageView);
         }
-*/
+
         imageLoader.loadImage(url, imageView,progressBar);
         container.addView(view);
         return view;
@@ -95,6 +103,6 @@ public class ImageViewerPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        (container).removeView((CropperView) object);
+   //     (container).removeView((CropperView) object);
     }
 }

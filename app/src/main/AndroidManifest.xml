@@ -21,10 +21,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".home.view.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".image_viewer.ImageViewerActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme"/>
+
     </application>
 
 </manifest>

@@ -69,7 +69,7 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
         if(fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")){
             AlbumViewHolder albumViewHolder =(AlbumViewHolder)holder;
@@ -90,7 +90,18 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         //    otherViewHolder.imageView.getLayoutParams().height = fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getHeight();
         //    otherViewHolder.imageView.getLayoutParams().width = fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getWidth();
             imageLoader.loadImage(fbDetailsList.get(position).getAttachments().getData().get(0).getMedia().getImage().getSrc(),otherViewHolder.imageView,otherViewHolder.imageProgressBar);
+            otherViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
+                    if( context instanceof HomeActivity){
+
+                        ((HomeActivity) context).openImageViewer(fbDetailsList.get(position).getAttachments().getData(),position);
+
+                    }
+
+                }
+            });
         }
 
 

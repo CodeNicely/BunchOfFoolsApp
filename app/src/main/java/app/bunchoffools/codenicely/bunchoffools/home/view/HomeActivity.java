@@ -1,5 +1,6 @@
 package app.bunchoffools.codenicely.bunchoffools.home.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
@@ -15,11 +16,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.about_us.view.AboutUsFragment;
 import app.bunchoffools.codenicely.bunchoffools.contact_us.view.ContactUsFragment;
 import app.bunchoffools.codenicely.bunchoffools.developers.view.DeveloperFragment;
 import app.bunchoffools.codenicely.bunchoffools.gallery.view.GalleryFragment;
+import app.bunchoffools.codenicely.bunchoffools.helper.Keys;
+import app.bunchoffools.codenicely.bunchoffools.home.model.data.FbData;
+import app.bunchoffools.codenicely.bunchoffools.image_viewer.ImageViewerActivity;
 import app.bunchoffools.codenicely.bunchoffools.join_us.view.JoinUsFragment;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.view.UploadSpotFragment;
 import butterknife.BindView;
@@ -50,6 +57,7 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         setFragment(new HomeFragment(),"Home");
+
          }
 
 
@@ -101,35 +109,25 @@ public class HomeActivity extends AppCompatActivity
             fragment=new HomeFragment();
             title="Home";
         } else if (id == R.id.nav_spot) {
-
             fragment=new UploadSpotFragment();
             title="Upload Spot";
         } else if (id == R.id.nav_gallery) {
             fragment=new GalleryFragment();
             title="Gallery";
-
         } else if (id == R.id.nav_join) {
-
             fragment=new JoinUsFragment();
             title="Join Us";
-
         } else if (id == R.id.nav_about) {
-
             fragment=new AboutUsFragment();
             title="About Us";
         } else if (id == R.id.nav_developers) {
             fragment=new DeveloperFragment();
             title="Developers";
-
         }else if (id == R.id.nav_contact) {
             fragment=new ContactUsFragment();
             title="Contact Us";
-
         }
-
         setFragment(fragment,title);
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -141,11 +139,19 @@ void setFragment(Fragment fragment,String title){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container_body, fragment);
         fragmentTransaction.commit();
-
-        // set the toolbar title
         getSupportActionBar().setTitle(title);
     }
 
 }
+    public void openImageViewer(List<FbData> largeImageUrl, int position){
 
+        ArrayList<String> imageUrlList=new ArrayList<>();
+        for ( int i=0;i<largeImageUrl.size();i++){
+            imageUrlList.add(largeImageUrl.get(i).getMedia().getImage().getSrc());
+        }
+        Intent intent = new Intent(this, ImageViewerActivity.class);
+        intent.putStringArrayListExtra(Keys.KEY_IMAGE_LIST, imageUrlList);
+        intent.putExtra(Keys.KEY_POSITION_IMAGE, position);
+        startActivity(intent);
+    }
 }

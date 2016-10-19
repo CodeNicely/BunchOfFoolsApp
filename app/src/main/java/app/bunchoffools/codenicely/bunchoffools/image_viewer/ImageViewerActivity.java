@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 
+import com.alexvasilkov.gestures.views.GestureImageView;
+
 import java.util.ArrayList;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
@@ -71,7 +73,10 @@ public class ImageViewerActivity extends AppCompatActivity {
         imageViewerPagerAdapter.notifyDataSetChanged();
 
     }
+    protected void enableScroll(GestureImageView gestureView){
+        gestureView.getController().enableScrollInViewPager(viewPager);
 
+    }
 /*
     protected void enableScroll(GestureImageView gestureView){
         gestureView.getController().enableScrollInViewPager(viewPager);

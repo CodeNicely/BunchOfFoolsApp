@@ -16,6 +16,7 @@ import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.GlideImageLoader;
 import app.bunchoffools.codenicely.bunchoffools.helper.image_loader.ImageLoader;
 import app.bunchoffools.codenicely.bunchoffools.home.model.data.FbData;
+import app.bunchoffools.codenicely.bunchoffools.image_viewer.ImageViewerActivity;
 
 import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
@@ -52,7 +53,7 @@ public class FbImagesAdapter extends PagerAdapter{
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(final ViewGroup container, final int position) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
         View view = layoutInflater.inflate(R.layout.image_item_album, container, false);
@@ -62,6 +63,17 @@ public class FbImagesAdapter extends PagerAdapter{
        // imageView.getLayoutParams().height=fbDataList.get(position).getMedia().getImage().getWidth();
         ProgressBar imageProgressBar=(ProgressBar)view.findViewById(R.id.imageProgressBar);
         imageLoader.loadImage(fbDataList.get(position).getMedia().getImage().getSrc(),imageView,imageProgressBar);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if( context instanceof HomeActivity ){
+
+                    ((HomeActivity) context).openImageViewer(fbDataList,position);
+
+                }
+            }
+        });
+
         return view;
 
     }
