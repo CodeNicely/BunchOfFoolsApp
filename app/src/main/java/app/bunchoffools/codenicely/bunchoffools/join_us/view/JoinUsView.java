@@ -11,6 +11,7 @@ public interface JoinUsView {
 
     void showLoading(boolean show);
     void showMessage(String message);
+    void showDialog(String title,String message);
 
 
 

@@ -1,10 +1,12 @@
 package app.bunchoffools.codenicely.bunchoffools.join_us.view;
 
+import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -187,6 +189,24 @@ public class JoinUsFragment extends Fragment implements JoinUsView {
     public void showMessage(String message) {
 
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void showDialog(String title, String message) {
+
+        final AlertDialog ad = new AlertDialog.Builder(getActivity())
+                .create();
+        ad.setCancelable(false);
+        ad.setTitle(title);
+        ad.setMessage(message);
+        ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay , Thanks", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ad.cancel();
+            }
+        });
+        ad.show();
 
     }
 

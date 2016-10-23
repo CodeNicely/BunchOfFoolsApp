@@ -32,6 +32,7 @@ public class JoinUsPresenterImpl implements JoinUsPresenter {
                 joinUsView.showLoading(false);
                 if(joinUsData.isSuccess()){
                     joinUsView.showMessage(joinUsData.getMessage());
+                    joinUsView.showDialog("Successfully Submitted","We have received your request and we will be contacting you soon.Thanks :)");
                 }else{
                     joinUsView.showMessage(joinUsData.getMessage());
                 }
