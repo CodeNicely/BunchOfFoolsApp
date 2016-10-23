@@ -9,5 +9,5 @@ import app.bunchoffools.codenicely.bunchoffools.developers.DevelopersCallback;
 public interface DeveloperProvider {
 
     void requestDevelopersData(DevelopersCallback developersCallback);
-
+    void onDestroy();
 }

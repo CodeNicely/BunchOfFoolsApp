@@ -41,6 +41,9 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     private String mParam1;
     private String mParam2;
     private ImageLoader imageLoader;
+    private AboutUsPresenter aboutUsPresenter;
+    private View snackView;
+
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
 
@@ -95,8 +98,9 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
         View view= inflater.inflate(R.layout.fragment_about_us, container, false);
         ButterKnife.bind(this,view);
 
+        snackView=getActivity().findViewById(R.id.cordinatorLayout);
         imageLoader=new GlideImageLoader(getContext());
-        AboutUsPresenter aboutUsPresenter=new AboutUsPresenterImpl(this,new RetrofitAboutUsProvider());
+        aboutUsPresenter=new AboutUsPresenterImpl(this,new RetrofitAboutUsProvider());
 
         description.setVisibility(View.GONE);
         imageView.setVisibility(View.GONE);
@@ -129,7 +133,7 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     public void showMessage(String message) {
 
         Snackbar snackbar = Snackbar
-                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
+                .make(snackView, message, Snackbar.LENGTH_LONG);
 
         snackbar.show();
     }
@@ -169,4 +173,12 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        aboutUsPresenter.onDestroy();
+    }
+
+
 }

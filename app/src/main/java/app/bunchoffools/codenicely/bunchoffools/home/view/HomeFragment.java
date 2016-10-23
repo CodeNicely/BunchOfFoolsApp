@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment implements HomeView {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    private View snackView;
 
     @BindView(R.id.viewPager)
     ViewPager viewPager;
@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment implements HomeView {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private Snackbar snackbar;
     private OnFragmentInteractionListener mListener;
 
     public HomeFragment() {
@@ -101,6 +101,8 @@ public class HomeFragment extends Fragment implements HomeView {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
+
+        snackView=getActivity().findViewById(R.id.cordinatorLayout);
 
         homePresenter=new HomePresenterImpl(this,new RetrofitHomeProvider());
         homePresenter.requestHome();
@@ -168,9 +170,8 @@ public class HomeFragment extends Fragment implements HomeView {
     @Override
     public void showMessage(String message) {
 
-        Snackbar snackbar = Snackbar
-                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
 
+        Snackbar snackbar = Snackbar.make(snackView, message, Snackbar.LENGTH_LONG);
         snackbar.show();
 
     }
@@ -202,4 +203,12 @@ public class HomeFragment extends Fragment implements HomeView {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        homePresenter.onDestroy();
+
+    }
+
 }

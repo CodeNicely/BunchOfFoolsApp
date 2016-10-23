@@ -39,7 +39,7 @@ public class GalleryFragment extends Fragment implements GalleryView{
     private static final String ARG_PARAM2 = "param2";
     private GalleryAdapter galleryAdapter;
     private GalleryPresenter galleryPresenter;
-
+    private View snackView;
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
@@ -90,6 +90,7 @@ public class GalleryFragment extends Fragment implements GalleryView{
 
         ButterKnife.bind(this,view);
 
+        snackView=getActivity().findViewById(R.id.cordinatorLayout);
         StaggeredGridLayoutManager staggeredGridLayoutManager=
                 new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         staggeredGridLayoutManager.setGapStrategy(GAP_HANDLING_NONE);
@@ -139,7 +140,7 @@ public class GalleryFragment extends Fragment implements GalleryView{
     @Override
     public void showMessage(String message) {
         Snackbar snackbar = Snackbar
-                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
+                .make(snackView, message, Snackbar.LENGTH_LONG);
 
         snackbar.show();
 
@@ -165,5 +166,12 @@ public class GalleryFragment extends Fragment implements GalleryView{
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        galleryPresenter.onDestroy();
+
     }
 }

@@ -9,5 +9,6 @@ import app.bunchoffools.codenicely.bunchoffools.gallery.GalleryCallback;
 public interface GalleryProvider {
 
     void getImageUrls(GalleryCallback galleryCallback);
+    void onDestroy();
 
 }

@@ -8,5 +8,6 @@ public interface GalleryPresenter {
 
 
     void getImageUrls();
+    void onDestroy();
 
 }

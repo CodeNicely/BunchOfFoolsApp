@@ -23,8 +23,8 @@ import static app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache.
 
 public class RetrofitAboutUsProvider implements AboutUsProvider {
 
-    AboutUsApi aboutUsApi;
-
+    private AboutUsApi aboutUsApi;
+    private Call<AboutUsData> aboutUsDataCall;
     public RetrofitAboutUsProvider(){
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -49,7 +49,7 @@ public class RetrofitAboutUsProvider implements AboutUsProvider {
     @Override
     public void requestAboutUs(final AboutUsCallBack aboutUsCallBack) {
 
-        Call<AboutUsData> aboutUsDataCall=aboutUsApi.getAboutUsData();
+        aboutUsDataCall=aboutUsApi.getAboutUsData();
 
         aboutUsDataCall.enqueue(new Callback<AboutUsData>() {
             @Override
@@ -66,5 +66,10 @@ public class RetrofitAboutUsProvider implements AboutUsProvider {
             }
         });
 
+    }
+
+    @Override
+    public void onDestroy() {
+        aboutUsDataCall.cancel();
     }
 }

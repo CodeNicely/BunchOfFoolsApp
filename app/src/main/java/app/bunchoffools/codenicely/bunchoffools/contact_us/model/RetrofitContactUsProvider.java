@@ -23,7 +23,9 @@ import static app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache.
 public class RetrofitContactUsProvider implements ContactUsProvider {
 
     private ContactUsApi contactUsApi;
-    public RetrofitContactUsProvider(){
+    private Call<ContactUsData> contactUsDataCall;
+
+    public RetrofitContactUsProvider() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -37,14 +39,15 @@ public class RetrofitContactUsProvider implements ContactUsProvider {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
-        contactUsApi=retrofit.create(ContactUsApi.class);
+        contactUsApi = retrofit.create(ContactUsApi.class);
 
     }
+
     @Override
     public void requestContactUs(final ContactUsCallback contactUsCallback) {
 
 
-        Call<ContactUsData> contactUsDataCall=contactUsApi.requestContactUs();
+        contactUsDataCall = contactUsApi.requestContactUs();
         contactUsDataCall.enqueue(new Callback<ContactUsData>() {
             @Override
             public void onResponse(Call<ContactUsData> call, Response<ContactUsData> response) {
@@ -52,6 +55,7 @@ public class RetrofitContactUsProvider implements ContactUsProvider {
                 contactUsCallback.onSuccess(response.body());
 
             }
+
             @Override
             public void onFailure(Call<ContactUsData> call, Throwable t) {
 
@@ -62,5 +66,11 @@ public class RetrofitContactUsProvider implements ContactUsProvider {
         });
 
 
+    }
+
+    @Override
+    public void onDestroy() {
+
+        contactUsDataCall.cancel();
     }
 }

@@ -29,15 +29,17 @@ public class HomePresenterImpl implements HomePresenter {
         homeProvider.requestHome(new HomeCallback() {
             @Override
             public void onSuccess(HomeData homeData) {
+                if (homeView != null) {
+                    homeView.showLoader(false);
+                    if (homeData.isSuccess()) {
 
-                homeView.showLoader(false);
-                if(homeData.isSuccess()){
 
-                    homeView.setData(homeData);
-                    homeView.showMessage(homeData.getMessage());
+                        homeView.setData(homeData);
 
+                    }
                 }
             }
+
             @Override
             public void onFailure() {
 
@@ -48,6 +50,11 @@ public class HomePresenterImpl implements HomePresenter {
         });
 
 
+    }
 
+    @Override
+    public void onDestroy() {
+
+        homeProvider.onDestroy();
     }
 }

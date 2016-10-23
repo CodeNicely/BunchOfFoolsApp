@@ -3,6 +3,9 @@ package app.bunchoffools.codenicely.bunchoffools.helper;
 import android.app.Application;
 import android.content.Context;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
+
 import app.bunchoffools.codenicely.bunchoffools.helper.utils.TypefaceUtil;
 
 /**
@@ -12,6 +15,7 @@ import app.bunchoffools.codenicely.bunchoffools.helper.utils.TypefaceUtil;
 public class MyApplication extends Application {
 
     private static Context context;
+    private static String fcm_token;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -20,9 +24,12 @@ public class MyApplication extends Application {
         FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
         FontsOverride.setDefaultFont(this, "SERIF", "fonts/nunito.ttf");
         FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
+        fcm_token = FirebaseInstanceId.getInstance().getToken();
 
-//        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/nunito.ttf");
+    }
 
+    public static String getFcm_token() {
+        return fcm_token;
     }
 
     public static Context getContext() {

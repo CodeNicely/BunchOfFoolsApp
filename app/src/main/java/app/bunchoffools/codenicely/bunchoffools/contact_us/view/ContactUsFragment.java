@@ -42,7 +42,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     private String mParam1;
     private String mParam2;
     private ImageLoader imageLoader;
-
+    private View snackView;
 
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
@@ -113,6 +113,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
 
         ButterKnife.bind(this,view);
 
+        snackView=getActivity().findViewById(R.id.cordinatorLayout);
         contactUsPresenter=new ContactUsPresenterImpl(this,new RetrofitContactUsProvider());
         contactUsPresenter.requestContactUs();
 
@@ -154,7 +155,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     @Override
     public void showMessage(String message) {
         Snackbar snackbar = Snackbar
-                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
+                .make(snackView, message, Snackbar.LENGTH_LONG);
 
         snackbar.show();
     }
@@ -187,5 +188,11 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        contactUsPresenter.onDestroy();
     }
 }

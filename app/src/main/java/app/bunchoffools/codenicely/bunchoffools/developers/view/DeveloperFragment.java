@@ -40,7 +40,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private View snackView;
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
 
@@ -156,7 +156,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     public void showMessage(String message) {
 
         Snackbar snackbar = Snackbar
-                .make(getActivity().findViewById(R.id.cordinatorLayout), message, Snackbar.LENGTH_LONG);
+                .make(snackView, message, Snackbar.LENGTH_LONG);
 
         snackbar.show();
     }
@@ -192,5 +192,11 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        developersPresenter.onDestroy();
     }
 }

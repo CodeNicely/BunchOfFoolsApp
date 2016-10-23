@@ -7,5 +7,6 @@ package app.bunchoffools.codenicely.bunchoffools.developers.presenter;
 public interface DevelopersPresenter {
 
     void requestDevelopersData();
+    void onDestroy();
 
 }

@@ -9,5 +9,6 @@ import app.bunchoffools.codenicely.bunchoffools.home.HomeCallback;
 public interface HomeProvider  {
 
     void requestHome(HomeCallback homeCallback);
+    void onDestroy();
 
 }

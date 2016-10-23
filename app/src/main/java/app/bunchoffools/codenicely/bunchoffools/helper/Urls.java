@@ -15,4 +15,5 @@ public class Urls {
     public static final String SUB_URL_HOME = "home_api";
     public static final String SUB_URL_CONTACT_US ="contact_us" ;
     public static final String SUB_URL_DEVELOPERS = "developers";
+    public static final String SUB_URL_SPLASH_SCREEN = "splash_screen";
 }

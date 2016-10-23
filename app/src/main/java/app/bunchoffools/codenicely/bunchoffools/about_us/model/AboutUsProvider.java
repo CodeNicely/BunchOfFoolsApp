@@ -10,5 +10,6 @@ public interface AboutUsProvider {
 
 
     void requestAboutUs(AboutUsCallBack aboutUsCallBack);
+    void onDestroy();
 
 }

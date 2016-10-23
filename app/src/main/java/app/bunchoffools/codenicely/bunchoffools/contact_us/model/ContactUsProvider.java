@@ -10,5 +10,6 @@ public interface ContactUsProvider {
 
 
     void requestContactUs(ContactUsCallback contactUsCallback);
+    void onDestroy();
 
 }

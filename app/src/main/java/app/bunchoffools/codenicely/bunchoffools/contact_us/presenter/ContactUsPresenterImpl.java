@@ -50,4 +50,9 @@ public class ContactUsPresenterImpl implements ContactUsPresenter {
         });
 
     }
+
+    @Override
+    public void onDestroy() {
+        contactUsProvider.onDestroy();
+    }
 }

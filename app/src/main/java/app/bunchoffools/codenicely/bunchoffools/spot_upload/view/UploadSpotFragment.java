@@ -3,6 +3,7 @@ package app.bunchoffools.codenicely.bunchoffools.spot_upload.view;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -13,8 +14,10 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +40,7 @@ import java.io.IOException;
 import java.util.List;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
+import app.bunchoffools.codenicely.bunchoffools.home.view.HomeFragment;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.model.RetrofitUploadSpotProvider;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter.UploadSpotPresenter;
 import app.bunchoffools.codenicely.bunchoffools.spot_upload.presenter.UploadSpotPresenterImpl;
@@ -256,12 +260,7 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
+
     }
 
     @Override
@@ -410,6 +409,24 @@ public class UploadSpotFragment extends Fragment implements UploadSpotView {
 
         image = new File(filePath);
         Log.i(TAG, "fileFromPath method : " + image.getPath());
+
+    }
+
+    @Override
+    public void showDialog(String title, String message) {
+
+        final AlertDialog ad = new AlertDialog.Builder(getActivity())
+                .create();
+        ad.setCancelable(false);
+        ad.setTitle(title);
+        ad.setMessage(message);
+        ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay , Thanks", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ad.cancel();
+            }
+        });
+        ad.show();
 
     }
 }

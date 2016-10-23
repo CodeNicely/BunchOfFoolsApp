@@ -23,6 +23,7 @@ import static app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache.
 public class RetrofitGalleryProvider implements GalleryProvider {
 
     private GalleryApi galleryApi;
+    private Call<GalleryData> galleryDataCall;
     public RetrofitGalleryProvider(){
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -45,7 +46,7 @@ public class RetrofitGalleryProvider implements GalleryProvider {
     @Override
     public void getImageUrls(final GalleryCallback galleryCallback) {
 
-        Call<GalleryData> galleryDataCall=galleryApi.getImageUrls();
+        galleryDataCall=galleryApi.getImageUrls();
         galleryDataCall.enqueue(new Callback<GalleryData>() {
             @Override
             public void onResponse(Call<GalleryData> call, Response<GalleryData> response) {
@@ -62,5 +63,10 @@ public class RetrofitGalleryProvider implements GalleryProvider {
                 t.printStackTrace();
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        galleryDataCall.cancel();
     }
 }

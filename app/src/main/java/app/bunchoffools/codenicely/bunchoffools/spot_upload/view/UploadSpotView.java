@@ -59,6 +59,8 @@ public interface UploadSpotView {
 
     void fileFromPath(String filePath);
 
+    void showDialog(String title,String message);
+
 
 
 }

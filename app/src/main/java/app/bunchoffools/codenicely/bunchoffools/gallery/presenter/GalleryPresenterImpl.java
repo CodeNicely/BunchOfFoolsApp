@@ -46,4 +46,11 @@ public class GalleryPresenterImpl implements GalleryPresenter {
         });
 
     }
+
+    @Override
+    public void onDestroy() {
+
+        galleryProvider.onDestroy();
+
+    }
 }

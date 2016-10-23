@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#00000000"
-    tools:context="app.bunchoffools.codenicely.bunchoffools.splash_screen.SplashScreen">
+    tools:context="app.bunchoffools.codenicely.bunchoffools.splash_screen.view.SplashScreenActivity">
 
     <ImageView
-        android:paddingTop="200dp"
+        android:paddingTop="108dp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:src="@drawable/bunchofoolslogo" />
 
@@ -22,10 +22,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tagline"
-        android:textSize="20dp"
+        android:layout_marginTop="128dp"
+        android:textSize="24dp"
         android:padding="16dp"
         android:textColor="@color/colorAccent"
         />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

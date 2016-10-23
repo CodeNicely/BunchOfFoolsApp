@@ -23,6 +23,7 @@ import static app.bunchoffools.codenicely.bunchoffools.home.model.RetrofitCache.
 public class RetrofitHomeProvider implements HomeProvider{
 
     private HomeApi homeApi;
+    private Call<HomeData> homeDataCall;
     public RetrofitHomeProvider(){
 
 
@@ -45,7 +46,7 @@ public class RetrofitHomeProvider implements HomeProvider{
     @Override
     public void requestHome(final HomeCallback homeCallback) {
 
-        Call<HomeData> homeDataCall=homeApi.requestHome();
+        homeDataCall=homeApi.requestHome();
         homeDataCall.enqueue(new Callback<HomeData>() {
             @Override
             public void onResponse(Call<HomeData> call, Response<HomeData> response) {
@@ -60,6 +61,12 @@ public class RetrofitHomeProvider implements HomeProvider{
             }
         });
 
+    }
+
+    @Override
+    public void onDestroy() {
+
+        homeDataCall.cancel();
     }
 
 }

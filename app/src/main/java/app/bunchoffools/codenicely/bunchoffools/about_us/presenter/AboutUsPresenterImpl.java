@@ -47,4 +47,9 @@ public class AboutUsPresenterImpl implements AboutUsPresenter{
         });
 
     }
+
+    @Override
+    public void onDestroy() {
+        aboutUsProvider.onDestroy();
+    }
 }

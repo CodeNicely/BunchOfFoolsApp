@@ -1,5 +1,6 @@
 package app.bunchoffools.codenicely.bunchoffools.home.view;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
@@ -10,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -68,7 +70,28 @@ public class HomeActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+           // super.onBackPressed();
+
+            final AlertDialog ad = new AlertDialog.Builder(this)
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("Exit ?");
+            ad.setMessage("Do you really want to exit ?");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+                    finish();
+                }
+            });
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+
+                }
+            });
+            ad.show();
         }
     }
 
@@ -108,9 +131,11 @@ public class HomeActivity extends AppCompatActivity
 
             fragment=new HomeFragment();
             title="Home";
+            getSupportFragmentManager().popBackStack();
         } else if (id == R.id.nav_spot) {
             fragment=new UploadSpotFragment();
             title="Upload Spot";
+            getSupportFragmentManager().popBackStack();
         } else if (id == R.id.nav_gallery) {
             fragment=new GalleryFragment();
             title="Gallery";
@@ -120,6 +145,7 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
             fragment=new AboutUsFragment();
             title="About Us";
+            getSupportFragmentManager().popBackStack();
         } else if (id == R.id.nav_developers) {
             fragment=new DeveloperFragment();
             title="Developers";
@@ -141,7 +167,6 @@ void setFragment(Fragment fragment,String title){
         fragmentTransaction.commit();
         getSupportActionBar().setTitle(title);
     }
-
 }
     public void openImageViewer(List<FbData> largeImageUrl, int position){
 
@@ -154,4 +179,6 @@ void setFragment(Fragment fragment,String title){
         intent.putExtra(Keys.KEY_POSITION_IMAGE, position);
         startActivity(intent);
     }
+
+
 }

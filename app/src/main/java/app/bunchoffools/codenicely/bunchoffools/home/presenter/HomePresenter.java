@@ -8,5 +8,6 @@ public interface HomePresenter {
 
 
     void requestHome();
+    void onDestroy();
 
 }

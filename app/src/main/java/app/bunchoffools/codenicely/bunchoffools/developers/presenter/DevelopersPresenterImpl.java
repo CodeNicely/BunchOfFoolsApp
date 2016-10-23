@@ -49,4 +49,9 @@ public class DevelopersPresenterImpl implements DevelopersPresenter{
 
 
     }
+
+    @Override
+    public void onDestroy() {
+        developerProvider.onDestroy();
+    }
 }

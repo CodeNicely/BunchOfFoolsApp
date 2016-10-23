@@ -101,6 +101,7 @@ public class UploadSpotPresenterImpl implements UploadSpotPresenter{
                     if( spotUploadData.isSuccess()){
                         uploadSpotView.showLoader(false);
                         uploadSpotView.showMessage(spotUploadData.getMessage());
+                        uploadSpotView.showDialog("Uploaded Successfully","Your Spot has been uploaded successfully we will be reaching you soon");
                     }else{
                         uploadSpotView.showLoader(false);
                         uploadSpotView.showMessage(spotUploadData.getMessage());

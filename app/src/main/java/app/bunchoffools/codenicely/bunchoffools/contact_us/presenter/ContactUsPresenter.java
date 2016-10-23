@@ -9,5 +9,6 @@ import app.bunchoffools.codenicely.bunchoffools.contact_us.ContactUsCallback;
 public interface ContactUsPresenter {
 
     void requestContactUs();
+    void onDestroy();
 
 }

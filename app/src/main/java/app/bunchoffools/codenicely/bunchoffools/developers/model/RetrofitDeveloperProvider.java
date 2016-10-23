@@ -25,6 +25,7 @@ public class RetrofitDeveloperProvider implements DeveloperProvider{
 
 
     private DevelopersApi developersApi;
+    private Call<DeveloperData> developersApiCall;
     public RetrofitDeveloperProvider(){
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -44,7 +45,7 @@ public class RetrofitDeveloperProvider implements DeveloperProvider{
     @Override
     public void requestDevelopersData(final DevelopersCallback developersCallback) {
 
-        Call<DeveloperData> developersApiCall=developersApi.requestDeveloperData();
+        developersApiCall=developersApi.requestDeveloperData();
         developersApiCall.enqueue(new Callback<DeveloperData>() {
             @Override
             public void onResponse(Call<DeveloperData> call, Response<DeveloperData> response) {
@@ -58,5 +59,11 @@ public class RetrofitDeveloperProvider implements DeveloperProvider{
                 t.printStackTrace();
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+
+    developersApiCall.cancel();
     }
 }

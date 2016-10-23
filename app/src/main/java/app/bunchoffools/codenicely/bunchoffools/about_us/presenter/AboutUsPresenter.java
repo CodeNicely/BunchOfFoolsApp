@@ -8,5 +8,6 @@ public interface AboutUsPresenter {
 
 
     void requestAboutUs();
+    void onDestroy();
 
 }
