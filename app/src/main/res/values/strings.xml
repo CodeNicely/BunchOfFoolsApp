@@ -9,7 +9,6 @@
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_name">Name</string>
     <string name="hint_mobile">Mobile</string>
     <string name="hint_email">Email</string>
@@ -22,4 +21,6 @@
     <string name="about_developers">About Developers</string>
     <string name="failure_message">Unable to connect to Server</string>
     <string name="ok_text">Ok</string>
+    <string name="developed"><![CDATA[Powered by]]></string>
+    <string name="codenicely">Powered by CodeNicely</string>
 </resources>

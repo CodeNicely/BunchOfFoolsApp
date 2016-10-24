@@ -1,7 +1,9 @@
 package app.bunchoffools.codenicely.bunchoffools.contact_us.view;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.media.Image;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -13,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import app.bunchoffools.codenicely.bunchoffools.R;
 import app.bunchoffools.codenicely.bunchoffools.contact_us.model.RetrofitContactUsProvider;
@@ -32,11 +35,12 @@ import butterknife.ButterKnife;
  * Use the {@link ContactUsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ContactUsFragment extends Fragment implements ContactUsView{
+public class ContactUsFragment extends Fragment implements ContactUsView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -62,6 +66,12 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     @BindView(R.id.facebook)
     TextView facebook;
 
+    @BindView(R.id.twitter)
+    TextView twitter;
+
+    @BindView(R.id.instagram)
+    TextView instagram;
+
     @BindView(R.id.imageProgressBar)
     ProgressBar imageProgressBar;
 
@@ -70,6 +80,16 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
 
     @BindView(R.id.contactUsLayout)
     LinearLayout contactUsLayout;
+
+
+    @BindView(R.id.facebookLayout)
+    LinearLayout facebookLayout;
+
+    @BindView(R.id.twitterLayout)
+    LinearLayout twitterLayout;
+
+    @BindView(R.id.instagramLayout)
+    LinearLayout instagramLayout;
 
     private ContactUsPresenter contactUsPresenter;
     private OnFragmentInteractionListener mListener;
@@ -109,15 +129,15 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_contact_us, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
 
-        snackView=getActivity().findViewById(R.id.cordinatorLayout);
-        contactUsPresenter=new ContactUsPresenterImpl(this,new RetrofitContactUsProvider());
+        snackView = getActivity().findViewById(R.id.cordinatorLayout);
+        contactUsPresenter = new ContactUsPresenterImpl(this, new RetrofitContactUsProvider());
         contactUsPresenter.requestContactUs();
 
-        imageLoader=new GlideImageLoader(getContext());
+        imageLoader = new GlideImageLoader(getContext());
         return view;
     }
 
@@ -142,7 +162,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     @Override
     public void showLoader(boolean show) {
 
-        if(show) {
+        if (show) {
 
             contactUsLayout.setVisibility(View.GONE);
             progressBar.setVisibility(View.VISIBLE);
@@ -161,20 +181,107 @@ public class ContactUsFragment extends Fragment implements ContactUsView{
     }
 
     @Override
-    public void setData(ContactUsData contactUsData) {
+    public void setData(final ContactUsData contactUsData) {
+
+        final String facebookUrl="https://www.facebook.com/"+contactUsData.getFacebook();
+        final String twitterUrl="https://www.twitter.com/"+contactUsData.getTwitter();
+        final String instagramUrl="https://www.instagram.com/"+contactUsData.getInstagram();
+
 
         email.setText(contactUsData.getEmail());
         mobile.setText(contactUsData.getMobile());
         address.setText(contactUsData.getAddress());
         website.setText(contactUsData.getWebsite());
-        facebook.setText(contactUsData.getFb());
+        facebook.setText(facebookUrl);
+        twitter.setText(twitterUrl);
+        instagram.setText(instagramUrl);
+        imageLoader.loadImage(contactUsData.getImage(), imageView, imageProgressBar);
 
-        imageLoader.loadImage(contactUsData.getImage(),imageView,imageProgressBar);
 
+        facebookLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                try {
+                    Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+                    facebookIntent.setData(Uri.parse(getFacebookPageURL(getContext(), contactUsData.getFacebook(), contactUsData.getFacebook())));
+                    startActivity(facebookIntent);
+                }catch (Exception e){
 
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(facebookUrl));
+                    startActivity(i);
+                }
+
+            }
+        });
+
+        twitterLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = null;
+                try {
+                    // get the Twitter app if possible
+                    getContext().getPackageManager().getPackageInfo("com.twitter.android", 0);
+                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id="+twitter));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                } catch (Exception e) {
+                    // no Twitter app, revert to browser
+                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse(twitterUrl));
+                }
+                getContext().startActivity(intent);
+            }
+        });
+
+        instagramLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                try {
+                    startActivity(newInstagramProfileIntent(getContext().getPackageManager(),instagramUrl));
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(instagramUrl)));
+                }
+            }
+        });
 
     }
+
+    //method to get the right URL to use in the intent
+    public String getFacebookPageURL(Context context,String facebookUrl,String facebookPageId) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + facebookUrl;
+            } else { //older versions of fb app
+                return "fb://page/" + facebookPageId;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return facebookUrl; //normal web url
+        }
+    }
+
+    public static Intent newInstagramProfileIntent(PackageManager pm, String url) {
+        final Intent intent = new Intent(Intent.ACTION_VIEW);
+        try {
+            if (pm.getPackageInfo("com.instagram.android", 0) != null) {
+                if (url.endsWith("/")) {
+                    url = url.substring(0, url.length() - 1);
+                }
+                final String username = url.substring(url.lastIndexOf("/") + 1);
+                // http://stackoverflow.com/questions/21505941/intent-to-open-instagram-user-profile-on-android
+                intent.setData(Uri.parse("http://instagram.com/_u/" + username));
+                intent.setPackage("com.instagram.android");
+                return intent;
+            }
+        } catch (PackageManager.NameNotFoundException ignored) {
+        }
+        intent.setData(Uri.parse(url));
+        return intent;
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

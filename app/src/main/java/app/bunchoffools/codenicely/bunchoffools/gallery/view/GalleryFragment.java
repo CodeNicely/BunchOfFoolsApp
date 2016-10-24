@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -91,14 +92,15 @@ public class GalleryFragment extends Fragment implements GalleryView{
         ButterKnife.bind(this,view);
 
         snackView=getActivity().findViewById(R.id.cordinatorLayout);
-        StaggeredGridLayoutManager staggeredGridLayoutManager=
+        /*StaggeredGridLayoutManager staggeredGridLayoutManager=
                 new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         staggeredGridLayoutManager.setGapStrategy(GAP_HANDLING_NONE);
-
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(getContext(),2,VERTICAL,false);
+*/
+  //      GridLayoutManager gridLayoutManager=new GridLayoutManager(getContext(),2,VERTICAL,false);
 
         //recyclerView.setLayoutManager(staggeredGridLayoutManager);
-        recyclerView.setLayoutManager(gridLayoutManager);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);
 
         galleryAdapter=new GalleryAdapter(getContext());

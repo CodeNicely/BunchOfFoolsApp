@@ -39,30 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_5d62d2ec2c846408468c82253ba16b0dc11742c6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.1.0_4cdf3694e359052244d36bba21c0655f9998cf22/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_41f4e2c0445aa111026c9600545cce8ddfd41528/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,24 +75,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_ba1d5b8091732b016175b55a034dac85ee411013/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="eb56bf16e42c028aa88d7e751762e1fc5a770428">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_94287130417e98fad62bc6b3065a556aba657297/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -135,15 +99,6 @@
         revision="24.0.2"
         sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_232055288b0f1e6afe621297c5817383c8e858ac/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_eb29d1b54fc04fad948964b9440a534e39cc54da/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -183,6 +138,132 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_23002a9097bfc57d91c0c191d5280a5f17c7ee69/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_e3f99ad1f8d5b4c0fdf73dc531d67d7b2e6df9da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_5d0c9c62ecb2018043d216d57c50aaa5294d4fd5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.fenchtose.nocropper/nocropper/0.1.6/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="219a50124b4a16cfe4eb63636c6cd119e559baa4">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.fenchtose.nocropper-nocropper-0.1.6_da9fc4cf72480fd1b3dac1a4d2b1ed892564625a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1aec96b6361e9e5677b0a4fbfe3bc70ca801fcae">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55237357f500d953fce70396db6ee48acfaae80e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9bae206ce00be3c9bde0e6793be176d7f69ab7a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_5b87d4f50a10d1b7571cdde365e816be1d58e7b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.6_14eb4ba870dd115b0e56715c5207204d0e3a5d16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_330f10bc7757496da36ab8a5184989912004065a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_5d62d2ec2c846408468c82253ba16b0dc11742c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_41f4e2c0445aa111026c9600545cce8ddfd41528/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_ba1d5b8091732b016175b55a034dac85ee411013/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0bc6fcf54f388d4e029f862e49d91723398694e7">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_94287130417e98fad62bc6b3065a556aba657297/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_eb29d1b54fc04fad948964b9440a534e39cc54da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -219,30 +300,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_23002a9097bfc57d91c0c191d5280a5f17c7ee69/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_77ae8408b64a93b55ad2cf4d92561dbc0ccc21d6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_e3f99ad1f8d5b4c0fdf73dc531d67d7b2e6df9da/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -273,48 +336,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_5d0c9c62ecb2018043d216d57c50aaa5294d4fd5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.fenchtose.nocropper/nocropper/0.1.6/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="219a50124b4a16cfe4eb63636c6cd119e559baa4">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.fenchtose.nocropper-nocropper-0.1.6_da9fc4cf72480fd1b3dac1a4d2b1ed892564625a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="03cbb4440eb896d484f861d0ad8415192e246f2e">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_55237357f500d953fce70396db6ee48acfaae80e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.1_d366f5ee54c48d9b921c783db50db5605b3d25f6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9bae206ce00be3c9bde0e6793be176d7f69ab7a9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -327,15 +354,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_5b87d4f50a10d1b7571cdde365e816be1d58e7b5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -345,30 +363,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.6_14eb4ba870dd115b0e56715c5207204d0e3a5d16/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
         <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_3615d7a781ca86b7d92b59cfa899e6c3ee807bc7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/meghal/AndroidStudioProjects/BunchOfFoolsApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_330f10bc7757496da36ab8a5184989912004065a/classes.dex" />
     </item>
     <item
         is-multidex="true"

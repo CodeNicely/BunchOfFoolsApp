@@ -79,7 +79,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     finish();
 
                 }
-            }, 3000);
+            }, 5000);
         }
 
 
@@ -98,7 +98,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                 finish();
 
             }
-        }, 3000);
+        }, 5000);
 
     }
 }

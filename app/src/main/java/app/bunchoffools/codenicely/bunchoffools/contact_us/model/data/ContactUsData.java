@@ -12,17 +12,22 @@ public class ContactUsData {
     private String email;
     private String mobile;
     private String address;
-    private String fb;
+    private String facebook;
+    private String twitter;
+    private String instagram;
     private String website;
     private String image;
 
-    public ContactUsData(boolean success, String message, String email, String mobile, String address, String fb, String website, String image) {
+
+    public ContactUsData(boolean success, String message, String email, String mobile, String address, String facebook, String twitter, String instagram, String website, String image) {
         this.success = success;
         this.message = message;
         this.email = email;
         this.mobile = mobile;
         this.address = address;
-        this.fb = fb;
+        this.facebook = facebook;
+        this.twitter = twitter;
+        this.instagram = instagram;
         this.website = website;
         this.image = image;
     }
@@ -47,8 +52,16 @@ public class ContactUsData {
         return address;
     }
 
-    public String getFb() {
-        return fb;
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public String getInstagram() {
+        return instagram;
     }
 
     public String getWebsite() {
