@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
             android:layout_margin="4dp"
+            card_view:cardBackgroundColor="#00000000"
             card_view:cardCornerRadius="4dp"
             card_view:contentPadding="4dp">
 
@@ -51,18 +52,20 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:minHeight="180dp"
                         android:padding="8dp" />
                 </RelativeLayout>
 
                 <TextView
                     android:id="@+id/about"
-                    android:padding="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/about_developers" />
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -74,13 +77,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:src="@drawable/ic_email_black_24dp" />
+                        android:src="@drawable/ic_email_blue" />
 
                     <TextView
                         android:id="@+id/email"
-                        android:padding="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textColor="@color/codeNicelyColor" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -93,13 +97,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:src="@drawable/ic_phone_black_24dp" />
+                        android:src="@drawable/ic_call_blue_24dp" />
 
                     <TextView
                         android:id="@+id/mobile"
-                        android:padding="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textColor="@color/codeNicelyColor" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -114,13 +119,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:src="@drawable/ic_location_on_black_24dp" />
+                        android:src="@drawable/ic_location_on_blue_24dp" />
 
                     <TextView
                         android:id="@+id/address"
-                        android:padding="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textColor="@color/codeNicelyColor" />
                 </LinearLayout>
 
 
@@ -134,13 +140,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:src="@drawable/ic_language_black_24dp" />
+                        android:src="@drawable/ic_language_blue_24dp" />
 
                     <TextView
-                        android:padding="4dp"
                         android:id="@+id/website"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textColor="@color/codeNicelyColor" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -153,13 +160,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:src="@drawable/ic_thumb_up_black_24dp" />
+                        android:src="@drawable/facebook" />
 
                     <TextView
                         android:id="@+id/facebook"
-                        android:padding="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:textColor="@color/codeNicelyColor" />
                 </LinearLayout>
 
             </LinearLayout>

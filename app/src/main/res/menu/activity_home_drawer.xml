@@ -7,21 +7,23 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
-            android:id="@+id/nav_spot"
-            android:icon="@drawable/ic_file_upload_black_24dp"
-            android:title="Upload a Spot" />
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_us_24dp"
+            android:title="About Us" />
+
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_gallery_24dp"
             android:title="Gallery" />
+
+        <item
+            android:id="@+id/nav_spot"
+            android:icon="@drawable/ic_file_upload_black_24dp"
+            android:title="Upload a Spot" />
         <item
             android:id="@+id/nav_join"
             android:icon="@drawable/ic_join_us_24dp"
             android:title="Join Us" />
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_about_us_24dp"
-            android:title="About Us" />
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_contact_us_24dp"
