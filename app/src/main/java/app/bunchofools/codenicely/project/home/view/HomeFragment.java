@@ -388,6 +388,8 @@ public class HomeFragment extends Fragment implements HomeView {
 
 
 
+
+
     //method to get the right URL to use in the intent
     public String getFacebookPageURL(Context context,String facebookUrl,String facebookPageId) {
         PackageManager packageManager = context.getPackageManager();

@@ -15,6 +15,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ import app.bunchofools.codenicely.project.spot_upload.view.UploadSpotFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -41,7 +43,6 @@ public class HomeActivity extends AppCompatActivity
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +61,7 @@ public class HomeActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        setFragment(new HomeFragment(),"Home");
+        setHome(new HomeFragment(),"Home");
 
          }
 
@@ -68,15 +69,19 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+        Fragment fragment=getSupportFragmentManager().findFragmentByTag("HOME");
+        Log.d("check",""+fragment);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if(getSupportFragmentManager().getBackStackEntryCount() > 1) {
-
-            super.onBackPressed();
-        }else{
+        }
+        else if(fragment==null)
+        {
+            Log.d("check",""+fragment);
+            setHome(new HomeFragment(),"Home");
+        }
+        else{
                 // super.onBackPressed();
-
                 final AlertDialog ad = new AlertDialog.Builder(this)
                         .create();
                 ad.setCancelable(false);
@@ -117,7 +122,6 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_spot) {
             fragment=new UploadSpotFragment();
             title="Upload Spot";
-            getSupportFragmentManager().popBackStack();
         } else if (id == R.id.nav_gallery) {
             fragment=new GalleryFragment();
             title="Gallery";
@@ -127,7 +131,7 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_about) {
             fragment=new AboutUsFragment();
             title="About Us";
-            getSupportFragmentManager().popBackStack();
+
         } else if (id == R.id.nav_developers) {
             fragment=new DeveloperFragment();
             title="Developers";
@@ -135,15 +139,18 @@ public class HomeActivity extends AppCompatActivity
             fragment=new ContactUsFragment();
             title="Contact Us";
         }
-
         if(id==R.id.nav_developers){
             toolbar.setBackgroundColor(ContextCompat.getColor(this,R.color.codeNicelyColor));
         }else{
             toolbar.setBackgroundColor(ContextCompat.getColor(this,R.color.colorPrimary));
 
         }
-
+        if (id == R.id.nav_home) {
+            setHome(fragment,title);
+             }
+        else{
         setFragment(fragment,title);
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -153,12 +160,22 @@ public void setFragment(Fragment fragment,String title){
     if (fragment != null) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.addToBackStack(fragment.getClass().getSimpleName());
         fragmentTransaction.replace(R.id.container_body, fragment);
         fragmentTransaction.commit();
         getSupportActionBar().setTitle(title);
+
     }
 }
+    public void setHome(Fragment fragment,String title){
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_body, fragment,"HOME");
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle(title);
+
+        }
+    }
     public void openImageViewerFacebook(List<FbData> largeImageUrl, int position){
 
         ArrayList<String> imageUrlList=new ArrayList<>();

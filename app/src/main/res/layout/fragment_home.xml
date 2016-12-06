@@ -30,8 +30,9 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:src="@drawable/bunchofoolslogo" />
+                    android:layout_height="155dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/splash" />
 
 
                 <LinearLayout
