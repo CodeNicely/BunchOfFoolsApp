@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BunchOfFools</string>
+    <string name="app_name">BunchofFools</string>
     <string name="tagline"> Stay Fools Keep Cleaning</string>
     <string name="title_activity_home">HomeActivity</string>
 
@@ -23,4 +23,5 @@
     <string name="ok_text">Ok</string>
     <string name="developed"><![CDATA[Powered by]]></string>
     <string name="codenicely">Powered by CodeNicely</string>
+    <string name="description">Description</string>
 </resources>

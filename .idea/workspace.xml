@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+<<<<<<< HEAD
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -22,11 +23,149 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_iid_9_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_iid_9_0_0.xml" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_9_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_9_0_0.xml" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_9_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_9_0_0.xml" />
+=======
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Fcm is" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ce46362-b4d2-4150-b2b0-2873f4f60f8a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/bunchofoolslogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/contact_us.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/facebook_logo_button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/gallery.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/instagram.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/instagram_colored.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/join_us.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/twitter_colored.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/upload_spot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/api/AboutUsApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/api/ContactUsApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/presenter/ContactUsPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/api/GalleryApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/HeaderGridView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/api/HomeApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/HomeGridData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeGridAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_grid_view_item.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/api/AboutUsApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/api/ContactUsApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/presenter/ContactUsPresenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/api/GalleryApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/api/HomeApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bunchofoolslogo.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/bunchoffools/codenicely/bunchoffools/ExampleInstrumentedTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/bunchofools/codenicely/project/ExampleInstrumentedTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/AboutUsCallBack.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/AboutUsCallBack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/model/AboutUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/model/AboutUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/model/RetrofitAboutUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/model/RetrofitAboutUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/model/data/AboutUsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/model/data/AboutUsData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/presenter/AboutUsPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/presenter/AboutUsPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/presenter/AboutUsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/presenter/AboutUsPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/view/AboutUsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/view/AboutUsFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/view/AboutUsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/about_us/view/AboutUsView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/ContactUsCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/ContactUsCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/model/ContactUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/model/ContactUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/model/RetrofitContactUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/model/RetrofitContactUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/model/data/ContactUsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/model/data/ContactUsData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/presenter/ContactUsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/presenter/ContactUsPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/view/ContactUsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/view/ContactUsFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/view/ContactUsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/contact_us/view/ContactUsView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/DevelopersCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/DevelopersCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/api/DevelopersApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/api/DevelopersApi.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/model/DeveloperProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/model/DeveloperProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/model/RetrofitDeveloperProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/model/RetrofitDeveloperProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/model/data/CompanyData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/model/data/CompanyData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/model/data/DeveloperData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/model/data/DeveloperData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/presenter/DevelopersPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/presenter/DevelopersPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/presenter/DevelopersPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/presenter/DevelopersPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/view/DeveloperFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/view/DeveloperFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/developers/view/DeveloperView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/developers/view/DeveloperView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/GalleryCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/GalleryCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/model/GalleryProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/model/GalleryProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/model/RetrofitGalleryProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/model/RetrofitGalleryProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/model/data/GalleryData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/model/data/GalleryData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/presenter/GalleryPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/presenter/GalleryPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/presenter/GalleryPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/presenter/GalleryPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/view/GalleryAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/view/GalleryAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/view/GalleryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/view/GalleryFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/view/GalleryView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/gallery/view/GalleryView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/FileProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/FileProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/FontsOverride.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/FontsOverride.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/Keys.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/Keys.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/MyApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/MyApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/Urls.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/Urls.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/image_loader/GlideImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/image_loader/GlideImageLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/image_loader/ImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/image_loader/ImageLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/image_loader/PicassoImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/image_loader/PicassoImageLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/utils/BitmapUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/utils/BitmapUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/utils/FileUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/utils/FileUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/utils/TypefaceUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/utils/TypefaceUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/utils/UriUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/utils/UriUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/helper/utils/Utils.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/utils/Utils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/HomeCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/HomeCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/HomeProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/HomeProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/RetrofitCache.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/RetrofitCache.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/RetrofitHomeProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/RetrofitHomeProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbAttachments.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbAttachments.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbDetails.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbDetails.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbFeeds.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbFeeds.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbImage.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbImage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbMedia.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbMedia.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbPaging.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbPaging.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbSubAttachments.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbSubAttachments.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/FbTarget.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/FbTarget.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/HomeData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/HomeData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/model/data/HomeSliderData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/model/data/HomeSliderData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/presenter/HomePresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/presenter/HomePresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/presenter/HomePresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/presenter/HomePresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/FacebookAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/FacebookAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/FbImagesAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/FbImagesAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/HomeView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/ImagesAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/ImagesAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/image_viewer/ImageViewerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/image_viewer/ImageViewerActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/image_viewer/ImageViewerPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/image_viewer/ImageViewerPagerAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/JoinUsCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/JoinUsCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/api/JoinUsApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/api/JoinUsApi.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/model/JoinUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/model/JoinUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/model/RetrofitJoinUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/model/RetrofitJoinUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/model/VolleyJoinUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/model/VolleyJoinUsProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/model/data/JoinUsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/model/data/JoinUsData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/presenter/JoinUsPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/presenter/JoinUsPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/presenter/JoinUsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/presenter/JoinUsPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/view/JoinUsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/view/JoinUsFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/join_us/view/JoinUsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/join_us/view/JoinUsView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/SplashScreenCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/SplashScreenCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/api/SplashScreenApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/api/SplashScreenApi.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/model/RetrofitSplashScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/model/RetrofitSplashScreenProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/model/SplashScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/model/SplashScreenProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/model/data/SplashScreenData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/model/data/SplashScreenData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/presenter/SplashScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/presenter/SplashScreenPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/presenter/SplashScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/presenter/SplashScreenPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/view/SplashScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/view/SplashScreenActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/view/SplashScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/view/SplashScreenView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/api/SpotUploadApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/api/SpotUploadApi.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/model/MockUploadSpotProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/model/MockUploadSpotProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/model/RetrofitUploadSpotProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/model/RetrofitUploadSpotProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/model/UploadSpotProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/model/UploadSpotProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/model/data/SpotUploadData.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/model/data/SpotUploadData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/presenter/UploadSpotPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/presenter/UploadSpotPresenter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/presenter/UploadSpotPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/presenter/UploadSpotPresenterImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/view/UploadSpotFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/view/UploadSpotFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/spot_upload/view/UploadSpotView.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/spot_upload/view/UploadSpotView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/test/java/app/bunchoffools/codenicely/bunchoffools/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/app/bunchofools/codenicely/project/ExampleUnitTest.java" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_24_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_24_2_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_24_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_24_2_1.xml" />
@@ -44,10 +183,32 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_24_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_24_2_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_24_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_24_2_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_24_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_24_2_1.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BunchOfFoolsApp.iml" afterPath="$PROJECT_DIR$/BunchOfFoolsApp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/google-services.json" afterPath="$PROJECT_DIR$/app/google-services.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact_us.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact_us.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_developer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_developer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_join_us.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_join_us.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_upload_spot.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_upload_spot.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
@@ -70,19 +231,13 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="BunchOfFoolsApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="SplashScreenActivity.java" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/view/SplashScreenActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-29.09091">
@@ -178,11 +333,31 @@
               </folding>
             </state>
           </provider>
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/view/SplashScreenActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactUsData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/model/data/ContactUsData.java">
+      <file leaf-file-name="MyApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/MyApplication.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
+        </entry>
+      </file>
+      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding />
@@ -198,19 +373,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+=======
+            <state relative-caret-position="162">
+              <caret line="73" column="72" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="ASClass" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1781,7 +1953,11 @@
     </option>
     <option name="modificationStamps">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="4433096441604" />
+=======
+        <entry key="$PROJECT_DIR$" value="4431273583888" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2169,6 +2345,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/about_us/presenter/AboutUsPresenterImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/presenter/HomePresenterImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/HomeFragment.java" />
@@ -2220,14 +2397,25 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact_us.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/contact_us/view/ContactUsFragment.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/view/SplashScreenActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/MyApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeActivity.java" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="78" />
     <option name="y" value="27" />
     <option name="width" value="1842" />
     <option name="height" value="1053" />
+=======
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="744" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2236,7 +2424,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -2254,8 +2442,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane" />
       <pane id="Scratches" />
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2263,10 +2458,11 @@
               <option name="myItemId" value="BunchOfFoolsApp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
+=======
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2306,9 +2502,105 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bunchoffools" />
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BunchOfFoolsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="splash_screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BunchOfFoolsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="splash_screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BunchOfFoolsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BunchOfFoolsApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2362,6 +2654,19 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2370,6 +2675,7 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../androidapp_ecell" />
     <property name="device.picker.selection" value="683362c2" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
@@ -2380,6 +2686,10 @@
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-mdpi" />
     </key>
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="device.picker.selection" value="192.168.0.100:5555" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2416,6 +2726,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -2449,6 +2760,8 @@
       </Profilers>
       <method />
     </configuration>
+=======
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -2462,31 +2775,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -2512,27 +2800,6 @@
         <option name="Make" enabled="false" />
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -2570,6 +2837,7 @@
       <listeners />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -2599,6 +2867,9 @@
       <method />
     </configuration>
     <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android Application" activateToolWindowBeforeRun="false">
+=======
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2738,20 +3009,31 @@
       <method />
     </configuration>
   </component>
+<<<<<<< HEAD
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
+=======
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5d57c79c-d498-4cd4-bbf8-a448c8220063" name="Default" comment="" />
-      <created>1477208115621</created>
+      <changelist id="5ce46362-b4d2-4150-b2b0-2873f4f60f8a" name="Default" comment="" />
+      <created>1478083850758</created>
       <option name="number" value="Default" />
+<<<<<<< HEAD
       <updated>1477208115621</updated>
+=======
+      <option name="presentableId" value="Default" />
+      <updated>1478083850758</updated>
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="78" y="27" width="1842" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -2777,59 +3059,54 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50961536" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.4903846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2839,6 +3116,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/gallery/view/GalleryFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2951,12 +3229,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/splash_screen/view/SplashScreenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/splash_screen/presenter/SplashScreenPresenter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/helper/MyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
@@ -3236,14 +3521,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25862068">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+=======
+        <state relative-caret-position="218">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchoffools/codenicely/bunchoffools/home/view/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9572554">
           <caret line="154" column="59" selection-start-line="154" selection-start-column="59" selection-end-line="154" selection-end-column="59" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/bunchofools/codenicely/project/home/view/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="73" column="72" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
+>>>>>>> 17b78fc3ed2f2e6c3a038f4b47a5ca387051f065
           <folding />
         </state>
       </provider>
