@@ -46,24 +46,14 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public int getItemViewType(int position) {
-    //    return super.getItemViewType(position);
+        //    return super.getItemViewType(position);
 
 
-        try {
-
-            if (fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")) {
-                return VIEW_TYPE_ALBUM;
-            } else {
-                return VIEW_TYPE_OTHER;
-            }
+        if (fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")) {
+            return VIEW_TYPE_ALBUM;
+        } else {
+            return VIEW_TYPE_OTHER;
         }
-        catch (Exception e)
-        {
-            Log.d("Resp","Hello "+position);
-        }
-        return VIEW_TYPE_OTHER;
-
-
 
     }
 
@@ -82,7 +72,7 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-        if(position!=8 && fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")){
+        if(fbDetailsList.get(position).getAttachments().getData().get(0).getType().equals("album")){
             AlbumViewHolder albumViewHolder =(AlbumViewHolder)holder;
         //    albumViewHolder.viewPager.getLayoutParams().height=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getImage().getHeight();
         //    albumViewHolder.viewPager.getLayoutParams().width=fbDetailsList.get(position).getAttachments().getData().get(0).getSubattachments().getData().get(0).getMedia().getImage().getWidth();
@@ -93,7 +83,7 @@ public class FacebookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             albumViewHolder.title.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getTitle());
             albumViewHolder.description.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getDescription());
 
-        }else if(position<8){
+        }else{
             OtherViewHolder otherViewHolder=(OtherViewHolder)holder;
 
             otherViewHolder.title.setText(fbDetailsList.get(position).getAttachments().getData().get(0).getTitle());
