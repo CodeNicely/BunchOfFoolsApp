@@ -5,19 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#02000000"
+    android:background="@color/white"
     tools:context="app.bunchofools.codenicely.project.splash_screen.view.SplashScreenActivity"
     android:weightSum="10"
     >
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bunchofoolslogo"
+        android:scaleType="fitXY"
+        android:layout_weight="1"
+        />
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="196dp"
+        android:layout_height="160dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/splash"
         android:scaleType="center"
         android:layout_weight="1"
         />
+
+
 
     <TextView
         android:layout_gravity="center"
@@ -26,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tagline"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:textSize="24dp"
         android:padding="16dp"
         android:layout_weight="2"
@@ -38,11 +49,11 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1"
         />
 
     <TextView
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:id="@+id/codeNicely"
         android:textColor="@color/colorPrimaryDark"
         android:gravity="center"
@@ -50,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/codenicely"
-        android:layout_weight="3"
+        android:layout_weight="2"
         />
 
     <ImageView
@@ -59,6 +70,6 @@
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:src="@drawable/logo_white"
-        android:layout_weight="2"
+        android:layout_weight="3"
         />
 </LinearLayout>
